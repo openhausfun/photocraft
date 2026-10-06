@@ -1,0 +1,40 @@
+[package]
+name = "photocraft-codecs"
+description = "Symmetric, depth- and metadata-preserving codecs for flat raster image formats"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[features]
+# Real-file corpus tests (opt-in; `cargo xtask test-corpus`). Fail when the corpus is missing.
+corpus = []
+default = []
+# AVIF *encode* via ravif (pure Rust). Decoding AVIF needs dav1d (C), so AVIF
+# stays read-unsupported and therefore asymmetric; it is off by default.
+avif = ["image/avif"]
+
+[dependencies]
+thiserror.workspace = true
+image = { workspace = true, features = ["gif", "bmp", "tga", "ico", "qoi", "hdr"] }
+png = "0.18"
+tiff = { version = "0.11", default-features = false, features = ["deflate", "lzw"] }
+exr = { version = "1.73", default-features = false }
+half = "2"
+flate2.workspace = true
+image-webp = "0.2"
+zune-jpeg = "0.5"
+zune-core = "0.5"
+jpeg-encoder = "0.6"
+
+# Orientation is applied a band of rows per task on native; wasm stays single-threaded.
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+rayon.workspace = true
+
+[dev-dependencies]
+proptest.workspace = true
+# Oracle decoders for cross-checking in tests only.
+image = { workspace = true, features = ["png", "jpeg", "tiff"] }
+
+[lints]
+workspace = true

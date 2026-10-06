@@ -1,0 +1,51 @@
+# Scorecard checklist: reliability (#212, #203, never-crash).
+# Statuses must be true on main. Verified against 4b53f62 on 2026-10-05.
+area = "reliability"
+title = "Reliability"
+order = 7
+
+[[item]]
+id = "REL-1"
+target = "panic_hunt fuzzes every command with adversarial params"
+status = "done"
+note = "engine/tests/panic_hunt.rs: every command, own thread, 4 s timeout; #[ignore], run in the gate"
+
+[[item]]
+id = "REL-2"
+target = "Every workspace crate carries the never-crash deny(clippy::unwrap_used, ...) attribute"
+status = "done"
+note = "Counted automatically above (crate roots under crates/ and apps/); testkit gained it in #221"
+
+[[item]]
+id = "REL-3"
+target = "The app catches escaped panics around command dispatch and import/export"
+status = "partial"
+note = "engine lib.rs:336 dispatch; crash_guard.rs:21 import/export; the dispatch guard is untested"
+
+[[item]]
+id = "REL-4"
+target = "Atomic save (temp, fsync, rename) for every document write"
+status = "missing"
+issue = 203
+note = "Documents use fs::write in place; prefs/presets/bundles use tmp + rename without fsync"
+
+[[item]]
+id = "REL-212-1"
+target = "Fallible allocation for paste/erase/fill/transform/save/import, clear out-of-memory error"
+status = "missing"
+issue = 212
+note = "try_reserve only in io/flat.rs:221; codec max_alloc limits cover decode only"
+
+[[item]]
+id = "REL-212-2"
+target = "Export switches to PSB when the estimated file size exceeds 2 GB"
+status = "missing"
+issue = 212
+note = "io/psd_export.rs:558 switches only when a side exceeds 30000 px"
+
+[[item]]
+id = "REL-212-3"
+target = "Tests: an allocation-limit injection makes each command Err with the document unchanged"
+status = "missing"
+issue = 212
+note = "Only codec/raw max_alloc tests (codecs/tests/limits.rs:48)"

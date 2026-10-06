@@ -1,0 +1,38 @@
+[package]
+name = "photocraft-io"
+description = "Import/export between photocraft documents and PSD/PSB and flat raster formats"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[lints]
+workspace = true
+
+[features]
+# Real-file corpus tests (opt-in; `cargo xtask test-corpus`). Fail when the corpus is missing.
+corpus = []
+
+[dependencies]
+photocraft-geom = { workspace = true }
+photocraft-color = { workspace = true }
+photocraft-cms = { workspace = true }
+photocraft-raster = { workspace = true }
+photocraft-doc = { workspace = true }
+photocraft-compose = { workspace = true }
+photocraft-algo = { workspace = true }
+photocraft-psd = { workspace = true }
+photocraft-codecs = { workspace = true }
+photocraft-raw = { workspace = true }
+photocraft-text = { workspace = true }
+photocraft-paint = { workspace = true }
+photocraft-vector = { workspace = true }
+photocraft-format = { path = "../format" }
+thiserror = { workspace = true }
+serde_json = { workspace = true }
+blake3 = { version = "1.8", default-features = false, features = ["pure"] }
+
+[dev-dependencies]
+photocraft-psd = { workspace = true, features = ["testgen"] }
+photocraft-raw = { workspace = true, features = ["testgen"] }
+proptest = { workspace = true }

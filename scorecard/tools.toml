@@ -1,0 +1,216 @@
+# Scorecard checklist: tools (#213 painting and retouching, #214 selection, transform, drawing).
+# An item is done when it has a command, a UI and tests.
+# Statuses must be true on main. Verified against 4b53f62 on 2026-10-05.
+area = "tools"
+title = "Tools"
+order = 3
+
+[[item]]
+id = "TOOL-213-1"
+target = "Pencil tool: aliased 1 px painting, square pixel-aligned cursor"
+status = "done"
+issue = 213
+note = "Tool::Pencil (B group): live aliased strokes on the pixel grid, square cursor, Auto Erase; pencil_tests.rs"
+
+[[item]]
+id = "TOOL-213-2"
+target = "Mixer Brush tool on the toolbar"
+status = "partial"
+issue = 213
+note = "paint.mixerBrush (brush_cmds.rs:337) + panel options; no Tool variant"
+
+[[item]]
+id = "TOOL-213-3"
+target = "Patch tool with a live preview of the patched area"
+status = "missing"
+issue = 213
+note = "No patch command or tool"
+
+[[item]]
+id = "TOOL-213-4"
+target = "Content-Aware Move tool reusing inpaint completion"
+status = "missing"
+issue = 213
+note = "inpaint::complete only used by spot healing (retouch_cmds.rs:386)"
+
+[[item]]
+id = "TOOL-213-5"
+target = "Painting a type/shape/smart/fill layer offers to rasterize, then continues the stroke"
+status = "done"
+issue = 213
+note = "rasterize_prompt.rs: OK rasterizes then paints (two history states), Cancel does nothing; drivable via ui.dialog.confirm"
+
+[[item]]
+id = "TOOL-213-6"
+target = "Fill dialog: contents, blend, opacity, preserve transparency; remembered; Shift+Backspace"
+status = "done"
+issue = 213
+note = "fill_ui.rs dialog over edit.fill (fill_cmds.rs): all contents, mode, opacity, preserve; remembered in prefs; Shift+F5 / Shift+Backspace"
+
+[[item]]
+id = "TOOL-213-7"
+target = "Live stroke preview for every brush-based retouch tool"
+status = "missing"
+issue = 213
+note = "Live stroke only for Brush and Eraser (canvas.rs:1684)"
+
+[[item]]
+id = "TOOL-213-8"
+target = "Clone Source: W/H link, drawn overlay (opacity/blend/clip/auto-hide), Alt target cursor"
+status = "partial"
+issue = 213
+note = "Panel W/H + overlay settings (preset_panels.rs:946-1015); no link, overlay never drawn"
+
+[[item]]
+id = "TOOL-213-9"
+target = "Eyedropper comparison ring (new colour above, current below) while sampling"
+status = "missing"
+issue = 213
+note = "sample_eyedropper (canvas.rs:1552) draws no ring"
+
+[[item]]
+id = "TOOL-213-10"
+target = "Ctrl+Alt drag resizes brush size/hardness with an on-canvas readout"
+status = "missing"
+issue = 213
+note = "Only [ ] resize (shortcuts.rs:270)"
+
+[[item]]
+id = "TOOL-213-11"
+target = "Editable pressure curve, global and per control"
+status = "missing"
+issue = 213
+note = "No pressure curve in engine, paint or ui-egui"
+
+[[item]]
+id = "TOOL-213-12"
+target = "Import an image file as a brush tip"
+status = "missing"
+issue = 213
+note = "Only brush.defineFromSelection and brush.presets.importAbr"
+
+[[item]]
+id = "TOOL-213-13"
+target = "Brush regression tests: no seams, hard edge, zero-scatter defaults, ABR never black"
+status = "partial"
+issue = 213
+note = "Missing-pattern ABR test (abr_map/tests.rs:181), hardness test; no seam/black tests"
+
+[[item]]
+id = "TOOL-213-14"
+target = "Tablet: no OS arrow cursor over the canvas on macOS, Windows and Linux"
+status = "partial"
+issue = 213
+note = "Brush tools set CursorIcon::None (canvas.rs:1259-1275); not verified per OS"
+
+[[item]]
+id = "TOOL-214-1"
+target = "Select and Mask workspace: view modes, Refine Edge brush, 6 outputs"
+status = "partial"
+issue = 214
+note = "Opens the generic select.refineEdge dialog (menus.rs:308)"
+
+[[item]]
+id = "TOOL-214-2"
+target = "Marquee: Shift square, Alt from centre, live W x H readout"
+status = "partial"
+issue = 214
+note = "marquee_end supports shift (chrome_ui.rs:167) but canvas.rs passes false (#208)"
+
+[[item]]
+id = "TOOL-214-3"
+target = "Color Range test: Sampled Colors at Fuzziness 0 selects the exact match only"
+status = "partial"
+issue = 214
+note = "Fuzziness-0 tests cover midtones/shadows only (selection_cmds.rs:444-447)"
+
+[[item]]
+id = "TOOL-214-4"
+target = "Move tool: box-select layers, Auto-Select hover outline, double-click fit, drag to a tab"
+status = "missing"
+issue = 214
+note = "move_mods.rs covers Shift/Alt/arrows only"
+
+[[item]]
+id = "TOOL-214-5"
+target = "Right-click menu during Free Transform (scale, rotate, skew, warp, flip, rotate 90/180)"
+status = "missing"
+issue = 214
+note = "No context menu in canvas.rs or transform_tool.rs"
+
+[[item]]
+id = "TOOL-214-6"
+target = "Puppet Warp mesh follows the object outline (constrained triangulation)"
+status = "missing"
+issue = 214
+note = "algo/puppet.rs:136 builds a block-grid mesh"
+
+[[item]]
+id = "TOOL-214-7"
+target = "Content-Aware Scale through the Free Transform box with a live proxy preview"
+status = "partial"
+issue = 214
+note = "edit.contentAwareScale (edit_menu_cmds.rs:899) behind a parameter dialog"
+
+[[item]]
+id = "TOOL-214-8"
+target = "A measured ruler angle prefills Image Rotation > Arbitrary (0.01 deg)"
+status = "missing"
+issue = 214
+note = "Arbitrary rotation is a generic dialog; ruler only feeds straighten"
+
+[[item]]
+id = "TOOL-214-9"
+target = "Crop: W x H x Resolution with units, saved crop presets, Straighten in the options bar"
+status = "partial"
+issue = 214
+note = "Ratio dropdown and fields only (panels.rs:551-579)"
+
+[[item]]
+id = "TOOL-214-10"
+target = "Pen: Alt breaks a handle, Shift 45 deg, Ctrl direct-selects, Backspace, close-drag handle"
+status = "missing"
+issue = 214
+note = "pen_down gets no modifiers (canvas.rs:1632)"
+
+[[item]]
+id = "TOOL-214-11"
+target = "Stroke Path dialog: pick any brush-based tool, Simulate Pressure"
+status = "partial"
+issue = 214
+note = "path.stroke brush, pencil, eraser (vector_cmds.rs:1170); brush-only button, no dialog"
+
+[[item]]
+id = "TOOL-214-12"
+target = "Shapes: on-canvas corner radius handles, shape feather, selection to shape with tolerance"
+status = "partial"
+issue = 214
+note = "select.convertToShape with tolerance (vector_cmds.rs:1256); radius as a field only"
+
+[[item]]
+id = "TOOL-214-13"
+target = "Mask Properties: Density and Feather controls"
+status = "partial"
+issue = 214
+note = "Vector-mask density/feather in the engine (vector_cmds.rs:948); no UI controls"
+
+[[item]]
+id = "TOOL-214-14"
+target = "Vanishing Point window: draw and edit planes, paste, clone in perspective"
+status = "partial"
+issue = 214
+note = "filter.vanishingPoint (vp_cmds.rs:15) behind a parameter dialog"
+
+[[item]]
+id = "TOOL-214-15"
+target = "Content-Aware Fill workspace: paint the sampling area, preview, rotate/scale/mirror, new layer"
+status = "partial"
+issue = 214
+note = "Engine sampling auto, rect, custom (edit_menu_cmds.rs:324); generic dialog"
+
+[[item]]
+id = "TOOL-214-16"
+target = "Liquify: redo (Cmd+Shift+Z)"
+status = "missing"
+issue = 214
+note = "liquify_ui.rs has undo only"

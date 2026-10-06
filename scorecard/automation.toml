@@ -1,0 +1,82 @@
+# Scorecard checklist: automation (#219). The command count and the menu wiring number come from
+# docs/parity.md.
+# Statuses must be true on main. Verified against 4b53f62 on 2026-10-05.
+area = "automation"
+title = "Automation"
+order = 6
+
+[[item]]
+id = "AUTO-1"
+target = "Every menu item dispatches a command id (UI, CLI, control channel and MCP share them)"
+status = "done"
+note = "docs/parity.md: all menu items live; menus.rs is_live"
+
+[[item]]
+id = "AUTO-219-1"
+target = "Record actions in a document-independent form (implicit layer, merged type keystrokes)"
+status = "missing"
+issue = 219
+note = "actions.rs:47 copies raw journal entries with explicit layer ids"
+
+[[item]]
+id = "AUTO-219-2"
+target = "Actions panel: step and dialog toggles, reorder, delete a step, Stop, sets, .atn import"
+status = "missing"
+issue = 219
+note = "Panel deletes whole actions only (actions.rs:146)"
+
+[[item]]
+id = "AUTO-219-3"
+target = "actions.record/stop/play/list commands for agents and the CLI"
+status = "missing"
+issue = 219
+note = "Recording is UI-only (actions.rs:37-60)"
+
+[[item]]
+id = "AUTO-219-4"
+target = "Replay tests for crop, filters, selections and styled text on a second document"
+status = "missing"
+issue = 219
+note = "One replay test (actions.rs:171: new layer, rect select, fill)"
+
+[[item]]
+id = "AUTO-219-5"
+target = "Batch: subfolders, open documents, naming template, progress/cancel, error log, stop"
+status = "partial"
+issue = 219
+note = "file_cmds.rs:590-631 folder/array input, per-file errors; no recursion, template or cancel"
+
+[[item]]
+id = "AUTO-219-6"
+target = "Plug-in ABI v2: panel kind, progress/cancel calls, read other layers, Last Filter repeats"
+status = "missing"
+issue = 219
+note = "runtime.rs:15 ABI_VERSION = 1; manifest.rs:18 Kind::Filter only"
+
+[[item]]
+id = "AUTO-219-7"
+target = "Local ONNX models behind a flag, managed in Preferences; subject select, background removal"
+status = "missing"
+issue = 219
+note = "No ONNX runtime dependency"
+
+[[item]]
+id = "AUTO-219-8"
+target = "xtask check that every panel button routes through a command id"
+status = "missing"
+issue = 219
+note = "No such xtask check"
+
+[[item]]
+id = "AUTO-219-9"
+target = "Headless commands for in-canvas type editing, Liquify/Puppet strokes, transform handles"
+status = "partial"
+issue = 219
+note = "filter.liquify strokes, edit.puppetWarp pins, type.edit, edit.transform; no caret API"
+
+[[item]]
+id = "AUTO-219-10"
+target = "Agent acceptance suite grown to 30-50 workflows"
+status = "partial"
+issue = 219
+note = "automation/tests/agent_tasks.rs runs 10 workflows over MCP"

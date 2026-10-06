@@ -1,0 +1,43 @@
+[package]
+name = "photocraft-ui-egui"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+photocraft-geom = { workspace = true }
+photocraft-color = { workspace = true }
+photocraft-raster = { workspace = true }
+photocraft-doc = { workspace = true }
+photocraft-compose = { workspace = true }
+photocraft-gpu = { workspace = true }
+photocraft-engine = { workspace = true }
+photocraft-plugins = { workspace = true }
+photocraft-algo = { workspace = true }
+photocraft-text = { workspace = true }
+photocraft-vector = { workspace = true }
+egui = { workspace = true }
+egui_extras = { version = "0.36", default-features = false, features = ["svg"] }
+eframe = { workspace = true, features = ["default_fonts", "wgpu", "accesskit"] }
+serde = { workspace = true }
+serde_json = { workspace = true }
+log = { workspace = true }
+base64 = "0.22"
+
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+rayon = { workspace = true }
+
+[dev-dependencies]
+egui_kittest = { workspace = true, features = ["wgpu", "snapshot", "eframe"] }
+# Only for examples/snapshot.rs (offscreen UI renders of real files).
+photocraft-io = { workspace = true }
+# Only for examples/interactive_bench.rs (JPEG encode, .pcraft saves).
+photocraft-codecs = { workspace = true }
+photocraft-format = { workspace = true }
+# Benchmark helpers for the `--json` benches `cargo xtask perf` runs (in-process RSS, percentiles).
+photocraft-testkit = { workspace = true }
+# Only for examples/perf_scenarios.rs (a 500-brush .abr for the #210 import row).
+photocraft-psd = { workspace = true }

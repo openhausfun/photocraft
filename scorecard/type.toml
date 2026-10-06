@@ -1,0 +1,68 @@
+# Scorecard checklist: type (#218, #206).
+# Statuses must be true on main. Verified against 4b53f62 on 2026-10-05.
+area = "type"
+title = "Type"
+order = 5
+
+[[item]]
+id = "TYPE-218-1"
+target = "Type on a path: path shape, glyphs along the curve, caret follows, PSD round trip"
+status = "missing"
+issue = 218
+note = "doc text.rs:209 TextShape has Point and Box only"
+
+[[item]]
+id = "TYPE-218-2"
+target = "Paragraph direction (Auto/LTR/RTL) in the panel and options bar; visual RTL caret"
+status = "missing"
+issue = 218
+note = "Engine has TextDirection (text.rs:155); no UI"
+
+[[item]]
+id = "TYPE-218-3"
+target = "Thai/Khmer/Indic fallback fonts; golden shaping tests for complex scripts and RTL"
+status = "missing"
+issue = 218
+note = "fonts.rs:28 fallback covers Arabic/Hebrew; no per-script golden tests (only a bidi test)"
+
+[[item]]
+id = "TYPE-218-4"
+target = "Variable font axis sliders from the font's axes; opsz follows the point size"
+status = "partial"
+issue = 218
+note = "type_cmds.rs:184 accepts variations; FaceInfo.axes unused in the UI"
+
+[[item]]
+id = "TYPE-218-5"
+target = "OpenType UI: Character panel buttons, Numerals and Stylistic Sets submenus"
+status = "partial"
+issue = 218
+note = "Type > OpenType toggles (type_extra_cmds.rs:512); no panel buttons or submenus"
+
+[[item]]
+id = "TYPE-218-6"
+target = "Manual pair kerning (Alt+arrows), optical kerning rendered, both round-trip PSD (#206)"
+status = "missing"
+issue = 218
+note = "Optical renders as Metrics (text.rs:21); Alt+arrow moves by word"
+
+[[item]]
+id = "TYPE-218-7"
+target = "Warp Text dialog previews live and opens with the layer's current warp"
+status = "missing"
+issue = 218
+note = "view_cmds.rs:834 always seeds arc, bend 50"
+
+[[item]]
+id = "TYPE-218-8"
+target = "Text editing: select all, double/triple/quadruple-click selection, paste, with tests"
+status = "partial"
+issue = 218
+note = "Cmd+A, paste and double-click exist; no triple/quadruple click, no tests"
+
+[[item]]
+id = "TYPE-218-9"
+target = "Offer 'Rasterize and continue?' for Distort/Perspective/Warp on live type"
+status = "missing"
+issue = 218
+note = "No such prompt"

@@ -1,0 +1,1979 @@
+# Japanese (ja) catalog. Columns, separated by a TAB:  context <TAB> source <TAB> translation
+#
+#   context  empty                a plain UI string; `source` is the English text in the code
+#            @id                  a command id (e.g. file.saveAs): wins over the English text for
+#                                 that menu item, so one id can read differently from its twin
+#            @plural              `source` is "one|other" (English forms); the translation lists the
+#                                 language's forms separated by "|" (see `plural` in i18n/mod.rs)
+#            anything else        a disambiguating context passed to `tr_ctx`
+#   escapes  \n  \t  \\  inside a column. `{name}` placeholders must appear in both columns.
+#   lines starting with # and blank lines are ignored.
+#
+# Clean-room: every entry was written from the plain meaning of the English label using ordinary
+# Japanese computing vocabulary (レイヤー, ぼかし, 選択範囲 ...). No proprietary localisation
+# resource, string table or product UI was consulted or copied; add entries the same way.
+# Product and technology names (PhotoCraft, ArtCraft, OpenType, CMYK, Lab ...) stay in Latin
+# letters; the trailing "…" of dialog commands is kept.
+
+	File	ファイル
+	Edit	編集
+	Image	画像
+	Layer	レイヤー
+	Type	文字
+	Select	選択
+	Filter	フィルター
+	View	表示
+	Window	ウィンドウ
+	Help	ヘルプ
+	(coming soon)	(近日対応)
+	New…	新規…
+	Open…	開く…
+	Open As…	形式を指定して開く…
+	Open Recent	最近使ったファイルを開く
+	Clear Recent Files	最近使ったファイルを消去
+	Close	閉じる
+	Close All	すべて閉じる
+	Close Others	ほかを閉じる
+	Save	保存
+	Save As…	名前を付けて保存…
+	Save a Copy…	コピーを保存…
+	Revert	復帰
+	Export	書き出し
+	Quick Export as PNG	PNG としてクイック書き出し
+	Export As…	書き出し形式を指定…
+	Export Preferences…	書き出しの環境設定…
+	Save for Web (Legacy)…	Web 用に保存(従来方式)…
+	Artboards to Files…	アートボードをファイルへ…
+	Artboards to PDF…	アートボードを PDF へ…
+	Layers to Files…	レイヤーをファイルへ…
+	Layer Comps to Files…	レイヤーカンプをファイルへ…
+	Color Lookup Tables…	カラールックアップテーブル…
+	Data Sets as Files…	データセットをファイルへ…
+	Paths to Illustrator…	パスをベクター形式へ…
+	Render Video…	ビデオを書き出し…
+	Generate	自動生成
+	Image Assets	画像アセット
+	Place Embedded…	埋め込みで配置…
+	Place Linked…	リンクで配置…
+	Package…	パッケージ化…
+	Automate	自動処理
+	Batch…	バッチ処理…
+	Create Droplet…	ドロップレットを作成…
+	Crop and Straighten Photos	写真を切り抜いて傾き補正
+	Contact Sheet II…	コンタクトシート II…
+	Conditional Mode Change…	条件付きカラーモード変更…
+	Fit Image…	画像を枠に合わせる…
+	Lens Correction…	レンズ補正…
+	Merge to HDR Pro…	HDR 合成(Pro)…
+	Photomerge…	写真を貼り合わせ…
+	Scripts	スクリプト
+	Image Processor…	画像プロセッサー…
+	Delete All Empty Layers	空のレイヤーをすべて削除
+	Flatten All Layer Effects	すべてのレイヤー効果を統合
+	Flatten All Masks	すべてのマスクを統合
+	Script Events Manager…	スクリプトイベント管理…
+	Import	読み込み
+	Browse…	参照…
+	Reveal in Finder	Finder で表示
+	File Info…	ファイル情報…
+	Print…	プリント…
+	Print One Copy	1 部プリント
+	Exit	終了
+	Undo	取り消し
+	Redo	やり直し
+	Toggle Last State	直前の状態と切り替え
+	Fade…	フェード…
+	Cut	切り取り
+	Copy	コピー
+	Copy Merged	統合部分をコピー
+	Paste	貼り付け
+	Paste Special	特殊貼り付け
+	Paste in Place	同じ位置に貼り付け
+	Paste Into	選択範囲内に貼り付け
+	Paste Outside	選択範囲外に貼り付け
+	Paste Lorem Ipsum	ダミーテキストを貼り付け
+	Clear	消去
+	Search…	検索…
+	Check Spelling…	スペルチェック…
+	Find and Replace Text…	テキストを検索して置換…
+	Fill…	塗りつぶし…
+	Stroke…	境界線を描く…
+	Content-Aware Fill…	コンテンツに応じた塗りつぶし…
+	Content-Aware Scale	コンテンツに応じた拡大・縮小
+	Puppet Warp	パペットワープ
+	Perspective Warp	遠近法ワープ
+	Free Transform	自由変形
+	Transform	変形
+	Again	もう一度
+	Scale	拡大・縮小
+	Rotate	回転
+	Skew	斜体
+	Distort	ゆがみ
+	Perspective	遠近法
+	Warp	ワープ
+	Flip Horizontal	水平方向に反転
+	Flip Vertical	垂直方向に反転
+	Rotate 180°	180°回転
+	Rotate 90° Clockwise	時計回りに 90°回転
+	Rotate 90° Counter Clockwise	反時計回りに 90°回転
+	180°	180°
+	90° Clockwise	時計回りに 90°
+	90° Counter Clockwise	反時計回りに 90°
+	Arbitrary…	角度を指定…
+	Auto-Align Layers…	レイヤーを自動整列…
+	Auto-Blend Layers…	レイヤーを自動合成…
+	Define Brush Preset…	ブラシプリセットを定義…
+	Define Pattern…	パターンを定義…
+	Define Custom Shape…	カスタムシェイプを定義…
+	Purge	メモリを解放
+	Clipboard	クリップボード
+	Histories	ヒストリー
+	Video Cache	ビデオキャッシュ
+	All	すべて
+	Presets	プリセット
+	Preset Manager…	プリセットマネージャー…
+	Migrate Presets	プリセットを移行
+	Export/Import Presets…	プリセットの書き出し/読み込み…
+	Color Settings…	カラー設定…
+	Assign Profile…	プロファイルを割り当て…
+	Convert to Profile…	プロファイルを変換…
+	Keyboard Shortcuts…	キーボードショートカット…
+	Menus…	メニュー…
+	Toolbar…	ツールバー…
+	Preferences	環境設定
+	General…	一般…
+	Interface…	インターフェイス…
+	Workspace…	ワークスペース…
+	Tools…	ツール…
+	History Log…	ヒストリーログ…
+	File Handling…	ファイル管理…
+	Export…	書き出し…
+	Performance…	パフォーマンス…
+	Scratch Disks…	スクラッチディスク…
+	Cursors…	カーソル…
+	Transparency & Gamut…	透明部分・色域…
+	Units & Rulers…	単位・定規…
+	Guides, Grid & Slices…	ガイド・グリッド・スライス…
+	Plug-ins…	プラグイン…
+	Type…	文字…
+	Enhanced Controls…	拡張コントロール…
+	Camera Raw…	Camera Raw…
+	Raw Defaults…	RAW の既定値…
+	Integrations…	連携…
+	AI Integrations…	AI 連携…
+	Install Plug-in…	プラグインをインストール…
+	Language Options	言語オプション
+	Settings…	設定…
+	Mode	モード
+	Bitmap	ビットマップ
+	Grayscale	グレースケール
+	Duotone	ダブルトーン
+	Indexed Color	インデックスカラー
+	RGB Color	RGB カラー
+	CMYK Color	CMYK カラー
+	Lab Color	Lab カラー
+	Multichannel	マルチチャンネル
+	8 Bits/Channel	8 ビット/チャンネル
+	16 Bits/Channel	16 ビット/チャンネル
+	32 Bits/Channel	32 ビット/チャンネル
+	Color Table…	カラーテーブル…
+	Bitmap…	ビットマップ…
+	Duotone…	ダブルトーン…
+	Indexed Color…	インデックスカラー…
+	Adjustments	色調補正
+	Brightness/Contrast…	明るさ・コントラスト…
+	Levels…	レベル補正…
+	Curves…	トーンカーブ…
+	Exposure…	露光量…
+	Vibrance…	自然な彩度…
+	Hue/Saturation…	色相・彩度…
+	Color Balance…	カラーバランス…
+	Black & White…	白黒…
+	Photo Filter…	写真フィルター…
+	Channel Mixer…	チャンネルミキサー…
+	Color Lookup…	カラールックアップ…
+	Invert	階調の反転
+	Posterize…	ポスタリゼーション…
+	Threshold…	2 階調化…
+	Gradient Map…	グラデーションマップ…
+	Selective Color…	特定色域の選択…
+	Shadows/Highlights…	シャドウ・ハイライト…
+	HDR Toning…	HDR トーン…
+	Desaturate	彩度を下げる
+	Match Color…	カラーを一致…
+	Replace Color…	色を置き換え…
+	Equalize	平均化
+	Auto Tone	自動トーン補正
+	Auto Contrast	自動コントラスト
+	Auto Color	自動カラー補正
+	Image Size…	画像サイズ…
+	Canvas Size…	カンバスサイズ…
+	Image Rotation	画像の回転
+	Flip Canvas Horizontal	カンバスを水平方向に反転
+	Flip Canvas Vertical	カンバスを垂直方向に反転
+	Crop	切り抜き
+	Trim…	トリミング…
+	Reveal All	すべてのコンテンツを表示
+	Duplicate…	複製…
+	Apply Image…	画像を適用…
+	Calculations…	演算…
+	Variables	変数
+	Define…	定義…
+	Data Sets…	データセット…
+	Apply Data Set…	データセットを適用…
+	Variable Data Sets…	変数データセット…
+	Trap…	トラップ…
+	Analysis	分析
+	Set Measurement Scale…	測定スケールを設定…
+	Select Data Points…	データポイントを選択…
+	Record Measurements	測定値を記録
+	Ruler Tool	定規ツール
+	Count Tool	カウントツール
+	Place Scale Marker…	スケールマーカーを配置…
+	Custom…	カスタム…
+	New	新規
+	Layer…	レイヤー…
+	Group…	グループ…
+	Group from Layers…	レイヤーからグループ…
+	Artboard…	アートボード…
+	Artboard from Group…	グループからアートボード…
+	Artboard from Layers…	レイヤーからアートボード…
+	Layer via Copy	コピーしたレイヤー
+	Layer via Cut	切り取ったレイヤー
+	Layer From Background…	背景からレイヤーへ…
+	Layer from Background…	背景からレイヤーへ…
+	New Shape Layer	新規シェイプレイヤー
+	New Type Layer	新規文字レイヤー
+	New Fill Layer	新規塗りつぶしレイヤー
+	New Adjustment Layer	新規色調補正レイヤー
+	New Layer Based Slice	レイヤーに基づく新規スライス
+	New Smart Object via Copy	コピーしたスマートオブジェクト
+	New Blank Video Layer	新規空白ビデオレイヤー
+	New Video Layer from File…	ファイルから新規ビデオレイヤー…
+	Duplicate Layer…	レイヤーを複製…
+	Delete Layer	レイヤーを削除
+	Delete	削除
+	Rename Layer	レイヤー名を変更
+	Create Layer	レイヤーを作成
+	Layer Style	レイヤースタイル
+	Blending Options…	レイヤー効果の描画オプション…
+	Bevel & Emboss…	ベベルとエンボス…
+	Inner Shadow…	シャドウ(内側)…
+	Inner Glow…	光彩(内側)…
+	Satin…	サテン…
+	Color Overlay…	カラーオーバーレイ…
+	Gradient Overlay…	グラデーションオーバーレイ…
+	Pattern Overlay…	パターンオーバーレイ…
+	Outer Glow…	光彩(外側)…
+	Drop Shadow…	ドロップシャドウ…
+	Copy Layer Style	レイヤースタイルをコピー
+	Paste Layer Style	レイヤースタイルを貼り付け
+	Clear Layer Style	レイヤースタイルを消去
+	Global Light…	グローバル光源…
+	Hide All Effects	すべての効果を非表示
+	Scale Effects…	効果を拡大・縮小…
+	Smart Filter	スマートフィルター
+	Convert for Smart Filters	スマートフィルター用に変換
+	Clear Smart Filters	スマートフィルターを消去
+	Disable Smart Filters	スマートフィルターを無効にする
+	Delete Filter Mask	フィルターマスクを削除
+	Disable Filter Mask	フィルターマスクを無効にする
+	Solid Color…	べた塗り…
+	Gradient…	グラデーション…
+	Pattern…	パターン…
+	Layer Mask	レイヤーマスク
+	Vector Mask	ベクトルマスク
+	Reveal Selection	選択範囲を表示
+	Hide Selection	選択範囲を非表示
+	Hide All	すべて非表示
+	From Transparency	透明部分から
+	Delete Vector Mask	ベクトルマスクを削除
+	Enable Layer Mask	レイヤーマスクを有効にする
+	Disable Layer Mask	レイヤーマスクを無効にする
+	Enable Vector Mask	ベクトルマスクを有効にする
+	Link Layer Mask	レイヤーマスクをリンク
+	Unlink Layer Mask	レイヤーマスクのリンクを解除
+	Link Vector Mask	ベクトルマスクをリンク
+	Add Vector Mask	ベクトルマスクを追加
+	Vector Mask from Current Path	現在のパスからベクトルマスク
+	Create Clipping Mask	クリッピングマスクを作成
+	Release Clipping Mask	クリッピングマスクを解除
+	Smart Objects	スマートオブジェクト
+	Smart Object	スマートオブジェクト
+	Convert to Smart Object	スマートオブジェクトに変換
+	Convert to Embedded	埋め込みに変換
+	Convert to Linked…	リンクに変換…
+	Edit Contents	コンテンツを編集
+	Replace Contents…	コンテンツを置き換え…
+	Relink to File…	ファイルに再リンク…
+	Export Contents…	コンテンツを書き出し…
+	Update Modified Content	変更されたコンテンツを更新
+	Update All Modified Content	変更されたコンテンツをすべて更新
+	Stack Mode	スタックモード
+	Entropy	エントロピー
+	Kurtosis	尖度
+	Maximum	最大値
+	Mean	平均
+	Median	中央値
+	Minimum	最小値
+	Range	範囲
+	Skewness	歪度
+	Standard Deviation	標準偏差
+	Summation	総和
+	Variance	分散
+	Video Layers	ビデオレイヤー
+	Interpret Footage…	素材を解釈…
+	Replace Footage…	素材を置き換え…
+	Reload Frame	フレームを再読み込み
+	Show Altered Video	変更されたビデオを表示
+	Restore Frame	フレームを復元
+	Restore All Frames	すべてのフレームを復元
+	Insert Blank Frame	空白フレームを挿入
+	Delete Frame	フレームを削除
+	Duplicate Frame	フレームを複製
+	Frame from Layers	レイヤーからフレーム
+	Video Frames to Layers…	ビデオフレームをレイヤーへ…
+	Rasterize	ラスタライズ
+	Rasterize Type	文字をラスタライズ
+	Rasterize Type Layer	文字レイヤーをラスタライズ
+	Rasterize Shape	シェイプをラスタライズ
+	New Guide Layout…	新規ガイドレイアウト…
+	New Guides From Shape	シェイプから新規ガイド
+	Lock Layers…	レイヤーをロック…
+	Link Layers	レイヤーをリンク
+	Select Linked Layers	リンクしたレイヤーを選択
+	Merge Layers	レイヤーを結合
+	Merge Down	下のレイヤーと結合
+	Merge Visible	表示レイヤーを結合
+	Stamp Visible	表示レイヤーをスタンプ
+	Stamp Down	下のレイヤーにスタンプ
+	Flatten Image	画像を統合
+	Matting	マット処理
+	Color Decontaminate…	カラーの混入を除去…
+	Remove Black Matte	黒マットを削除
+	Remove White Matte	白マットを削除
+	Defringe…	フリンジ削除…
+	Group Layers	レイヤーをグループ化
+	Ungroup Layers	レイヤーのグループ化を解除
+	Hide Layers	レイヤーを非表示
+	Arrange	重ね順
+	Bring to Front	最前面へ
+	Bring Forward	前面へ
+	Send Backward	背面へ
+	Send to Back	最背面へ
+	Reverse	反転
+	Combine Shapes	シェイプを合成
+	Unite Shapes	シェイプを結合
+	Subtract Front Shape	前面シェイプで型抜き
+	Intersect Shape Areas	シェイプの重なりを抽出
+	Exclude Overlapping Shapes	シェイプの重なりを除外
+	Merge Shape Components	シェイプの構成要素を結合
+	Align	整列
+	Top Edges	上端
+	Vertical Centers	垂直方向の中央
+	Bottom Edges	下端
+	Left Edges	左端
+	Horizontal Centers	水平方向の中央
+	Right Edges	右端
+	Distribute	分布
+	Vertically	垂直方向
+	Horizontally	水平方向
+	Layer Edges	レイヤーの端
+	Isolate Layers	レイヤーを単独表示
+	Layer Content Options…	レイヤーコンテンツのオプション…
+	Fill Content	塗りの内容
+	Deselect Layers	レイヤーの選択を解除
+	Find Layers	レイヤーを検索
+	Layer Comps	レイヤーカンプ
+	Layers	レイヤー
+	All Layers	すべてのレイヤー
+	Hidden Layers	非表示のレイヤー
+	Mask All Objects	すべてのオブジェクトをマスク
+	Subject	被写体
+	Sky	空
+	Panels	パネル
+	Character Panel	文字パネル
+	Paragraph Panel	段落パネル
+	Character Styles Panel	文字スタイルパネル
+	Paragraph Styles Panel	段落スタイルパネル
+	Glyphs Panel	字形パネル
+	Anti-Alias	アンチエイリアス
+	Sharp	シャープ
+	Crisp	鮮明
+	Strong	強く
+	Smooth	滑らか
+	Windows LCD	Windows LCD
+	Windows	Windows
+	Orientation	方向
+	Horizontal	横書き
+	Vertical	縦書き
+	OpenType	OpenType
+	Standard Ligatures	標準合字
+	Contextual Alternates	文脈検索代替字形
+	Discretionary Ligatures	任意の合字
+	Swash	スワッシュ
+	Oldstyle	オールドスタイル数字
+	Stylistic Alternates	スタイル代替字形
+	Titling Alternates	タイトル用代替字形
+	Ornaments	装飾記号
+	Ordinals	序数
+	Fractions	分数
+	Create Work Path	作業用パスを作成
+	Convert to Shape	シェイプに変換
+	Warp Text…	文字ワープ…
+	Convert to Point Text	ポイント文字に変換
+	Convert to Paragraph Text	段落文字に変換
+	Default Features	既定の機能
+	East Asian Features	東アジア言語の機能
+	Middle Eastern Features	中東言語の機能
+	Middle Eastern & South Asian Composer	中東・南アジア言語の組版エンジン
+	Update All Text Layers	すべての文字レイヤーを更新
+	Replace All Missing Fonts	不足しているフォントをすべて置き換え
+	Resolve Missing Fonts…	不足しているフォントを解決…
+	Font Preview Size	フォントのプレビューサイズ
+	None	なし
+	Small	小
+	Medium	中
+	Large	大
+	Extra Large	特大
+	Huge	最大
+	Load Default Type Styles	既定の文字スタイルを読み込み
+	Save Default Type Styles	既定の文字スタイルを保存
+	Deselect	選択を解除
+	Reselect	再選択
+	Inverse	選択範囲を反転
+	Inverse Selection	選択範囲を反転
+	Similar	近似色を選択
+	Color Range…	色域指定…
+	Focus Area…	焦点領域…
+	Select and Mask…	選択とマスク…
+	Modify	選択範囲を修正
+	Border…	境界…
+	Smooth…	滑らかに…
+	Expand…	拡張…
+	Contract…	縮小…
+	Feather…	境界をぼかす…
+	Grow	選択範囲を広げる
+	Transform Selection	選択範囲を変形
+	Edit in Quick Mask Mode	クイックマスクモードで編集
+	Load Selection…	選択範囲を読み込む…
+	Save Selection…	選択範囲を保存…
+	Match All	すべて一致
+	Last Filter	直前のフィルター
+	Filter Gallery…	フィルターギャラリー…
+	Adaptive Wide Angle…	広角補正…
+	Camera Raw Filter…	Camera Raw フィルター…
+	Liquify…	ゆがみ…
+	Vanishing Point…	消点…
+	Blur	ぼかし
+	Blur Gallery	ぼかしギャラリー
+	Field Blur…	フィールドぼかし…
+	Iris Blur…	虹彩絞りぼかし…
+	Tilt-Shift…	チルトシフト…
+	Path Blur…	パスぼかし…
+	Spin Blur…	回転ぼかし…
+	Blur More	ぼかし(強)
+	Box Blur…	ぼかし(ボックス)…
+	Gaussian Blur…	ぼかし(ガウス)…
+	Lens Blur…	ぼかし(レンズ)…
+	Motion Blur…	ぼかし(移動)…
+	Radial Blur…	ぼかし(円形)…
+	Shape Blur…	ぼかし(シェイプ)…
+	Smart Blur…	ぼかし(詳細)…
+	Surface Blur…	ぼかし(表面)…
+	Average	平均
+	Displace…	置き換え…
+	Pinch…	つまみ…
+	Polar Coordinates…	極座標…
+	Ripple…	波紋…
+	Shear…	シアー…
+	Spherize…	球面…
+	Twirl…	渦巻き…
+	Wave…	波形…
+	ZigZag…	ジグザグ…
+	Noise	ノイズ
+	Add Noise…	ノイズを加える…
+	Despeckle	ダスト除去
+	Dust & Scratches…	ダスト&スクラッチ…
+	Median…	メディアン…
+	Reduce Noise…	ノイズを軽減…
+	Pixelate	ピクセレート
+	Color Halftone…	カラーハーフトーン…
+	Crystallize…	水晶…
+	Facet	ファセット
+	Fragment	フラグメント
+	Mezzotint…	メゾティント…
+	Mosaic…	モザイク…
+	Pointillize…	ポインティリスト…
+	Render	描画
+	Clouds	雲模様
+	Difference Clouds	雲模様(差の絶対値)
+	Fibers…	繊維…
+	Flame…	炎…
+	Lens Flare…	レンズフレア…
+	Lighting Effects…	照明効果…
+	Picture Frame…	フレーム…
+	Tree…	木…
+	Sharpen	シャープ
+	Sharpen Edges	輪郭のみシャープ
+	Sharpen More	シャープ(強)
+	Smart Sharpen…	スマートシャープ…
+	Unsharp Mask…	アンシャープマスク…
+	High Pass…	ハイパス…
+	Stylize	表現手法
+	Diffuse…	拡散…
+	Emboss…	エンボス…
+	Extrude…	押し出し…
+	Find Edges	輪郭検出
+	Oil Paint…	油彩画…
+	Solarize	ソラリゼーション
+	Tiles…	タイル…
+	Trace Contour…	輪郭のトレース…
+	Wind…	風…
+	Video	ビデオ
+	De-Interlace…	インターレース解除…
+	NTSC Colors	NTSC カラー
+	Other	その他
+	Maximum…	最大値…
+	Minimum…	最小値…
+	Offset…	オフセット…
+	Plug-ins	プラグイン
+	Proof Setup	校正設定
+	Proof Colors	色の校正
+	Gamut Warning	色域外警告
+	Working CMYK	作業用 CMYK
+	Working Cyan Plate	作業用シアン版
+	Working Magenta Plate	作業用マゼンタ版
+	Working Yellow Plate	作業用イエロー版
+	Working Black Plate	作業用ブラック版
+	Working CMY Plate	作業用 CMY 版
+	Legacy Macintosh RGB	旧 Macintosh RGB
+	Internet Standard RGB	インターネット標準 RGB
+	Monitor RGB	モニター RGB
+	Color Blindness — Protanopia-type	色覚特性 — 1 型(P 型)
+	Color Blindness — Deuteranopia-type	色覚特性 — 2 型(D 型)
+	Zoom In	拡大
+	Zoom Out	縮小
+	Fit on Screen	画面サイズに合わせる
+	Fit Layer(s) on Screen	レイヤーを画面サイズに合わせる
+	Fit Artboard on Screen	アートボードを画面サイズに合わせる
+	100%	100%
+	200%	200%
+	Print Size	印刷サイズ
+	Pixel Aspect Ratio	ピクセル縦横比
+	Pixel Aspect Ratio Correction	ピクセル縦横比を補正
+	Custom Pixel Aspect Ratio…	ピクセル縦横比をカスタム…
+	Square	正方形ピクセル
+	D1/DV NTSC (0.91)	D1/DV NTSC (0.91)
+	D1/DV NTSC Widescreen (1.21)	D1/DV NTSC ワイド (1.21)
+	D1/DV PAL (1.09)	D1/DV PAL (1.09)
+	D1/DV PAL Widescreen (1.46)	D1/DV PAL ワイド (1.46)
+	Anamorphic 2:1 (2)	アナモルフィック 2:1 (2)
+	HDV 1080/DVCPRO HD 720 (1.33)	HDV 1080/DVCPRO HD 720 (1.33)
+	DVCPRO HD 1080/HDV 1080 (1.5)	DVCPRO HD 1080/HDV 1080 (1.5)
+	32-bit Preview Options…	32 ビットプレビューオプション…
+	Screen Mode	スクリーンモード
+	Standard Screen Mode	標準スクリーンモード
+	Full Screen Mode With Menu Bar	メニューバーありのフルスクリーンモード
+	Full Screen Mode	フルスクリーンモード
+	Cycle Screen Mode	スクリーンモードを切り替え
+	Show	表示する項目
+	Extras	エクストラ
+	Selection Edges	選択範囲の境界線
+	Target Path	ターゲットパス
+	Current Path	現在のパス
+	Grid	グリッド
+	Guides	ガイド
+	Canvas Guides	カンバスガイド
+	Artboard Guides	アートボードガイド
+	Count	カウント
+	Smart Guides	スマートガイド
+	Slices	スライス
+	Notes	注釈
+	Pixel Grid	ピクセルグリッド
+	Pixel Art	ピクセルアート
+	Pixel Art Preview	ピクセルアートのプレビュー
+	Pattern Preview	パターンプレビュー
+	Brush Preview	ブラシプレビュー
+	Mesh	メッシュ
+	Edit Pins	ピンを編集
+	Document Bounds	ドキュメントの境界
+	Show Extras Options…	エクストラの表示オプション…
+	Rulers	定規
+	Snap	スナップ
+	Snap To	スナップ先
+	Lock Guides	ガイドをロック
+	Clear Guides	ガイドを消去
+	Clear Selected Artboard Guides	選択したアートボードのガイドを消去
+	Clear Canvas Guides	カンバスガイドを消去
+	New Guide…	新規ガイド…
+	Lock Slices	スライスをロック
+	Clear Slices	スライスを消去
+	Match Zoom	ズームを一致
+	Match Location	位置を一致
+	Match Rotation	回転を一致
+	Cascade	重ねて表示
+	Tile	並べて表示
+	Tile All Horizontally	すべてを横に並べる
+	Tile All Vertically	すべてを縦に並べる
+	2-up Horizontal	2 アップ(横)
+	2-up Vertical	2 アップ(縦)
+	3-up Horizontal	3 アップ(横)
+	3-up Stacked	3 アップ(積み重ね)
+	3-up Vertical	3 アップ(縦)
+	4-up	4 アップ
+	6-up	6 アップ
+	Consolidate All to Tabs	すべてをタブに統合
+	Float in Window	ウィンドウ内に浮動
+	Float All in Windows	すべてをウィンドウ内に浮動
+	New Window for Document	ドキュメントの新規ウィンドウ
+	Workspace	ワークスペース
+	Essentials	基本
+	Graphic and Web	グラフィックと Web
+	Painting	ペイント
+	Photography	写真
+	New Workspace…	新規ワークスペース…
+	Delete Workspace…	ワークスペースを削除…
+	Reset Workspace	ワークスペースをリセット
+	Lock Workspace	ワークスペースをロック
+	Theme	テーマ
+	Pro Theme	プロテーマ
+	Pro Medium Gray Theme	プロ(中間グレー)テーマ
+	Studio Theme	スタジオテーマ
+	Studio Light Theme	スタジオ(ライト)テーマ
+	Classic Theme	クラシックテーマ
+	Next Theme	次のテーマ
+	Actions	アクション
+	Brush Settings	ブラシ設定
+	Brushes	ブラシ
+	Channels	チャンネル
+	Character	文字
+	Character Styles	文字スタイル
+	Clone Source	コピーソース
+	Color	カラー
+	Glyphs	字形
+	Gradients	グラデーション
+	Histogram	ヒストグラム
+	History	ヒストリー
+	Info	情報
+	Measurement Log	測定ログ
+	Modifier Keys	修飾キー
+	Navigator	ナビゲーター
+	Options	オプション
+	Paragraph	段落
+	Paragraph Styles	段落スタイル
+	Paths	パス
+	Patterns	パターン
+	Properties	プロパティ
+	Shapes	シェイプ
+	Styles	スタイル
+	Swatches	スウォッチ
+	Timeline	タイムライン
+	Tool Presets	ツールプリセット
+	Tools	ツール
+	About PhotoCraft	PhotoCraft について
+	PhotoCraft Website	PhotoCraft の Web サイト
+	PhotoCraft on GitHub	GitHub 上の PhotoCraft
+	ArtCraft Website	ArtCraft の Web サイト
+	Join the ArtCraft Discord…	ArtCraft の Discord に参加…
+	Report an Issue…	問題を報告…
+	WIA Support…	WIA サポート…
+	Apply	適用
+	HSB/HSL	HSB/HSL
+	Invert…	反転…
+	Load Files into Stack…	ファイルをスタックに読み込み…
+	Motion	モーション
+	Notes…	注釈…
+	Other…	その他…
+	Remove Warp Split	ワープ分割を削除
+	Shape	シェイプ
+	Split Warp Crosswise	ワープを十字に分割
+	Split Warp Horizontally	ワープを水平方向に分割
+	Split Warp Vertically	ワープを垂直方向に分割
+	Statistics…	統計情報…
+@plural	{n} item|{n} items	{n} 件
+	Auto	自動
+
+# Dialogs and panels
+	(print to the printer)	(プリンターへ出力)
+	+ Add variable	+ 変数を追加
+	30 frames @ 30 fps	30 フレーム @ 30 fps
+	3D LUT File	3D LUT ファイル
+	Absolute	絶対
+	Absolute Colorimetric	絶対的な色域を維持
+	Action	アクション
+	Adaptive	アダプティブ
+	Adaptive Wide Angle isn't open	広角補正は開いていません
+	Add	追加
+	Add Layer Mask	レイヤーマスクを追加
+	Add Stop	分岐点を追加
+	Add a layer style	レイヤースタイルを追加
+	Add a mask  (from the selection; {key} inverts)	マスクを追加(選択範囲から。{key} で反転)
+	Add an adjustment	色調補正を追加
+	Add disk	ディスクを追加
+	Add space after paragraph	段落の後ろにスペースを追加
+	Add space before paragraph	段落の前にスペースを追加
+	Add to Sample	サンプルに追加
+	Add to selection  ({key})	選択範囲に追加({key})
+	Adjust for Zoom	ズームに合わせて調整
+	Adjustment visible	色調補正を表示
+	Adobe RGB (1998) compatible	Adobe RGB (1998) 互換
+	Align and Distribute	整列と分布
+	Align and distribute	整列と分布
+	Align horizontal centers	水平方向の中央で整列
+	Align left edges	左端で整列
+	Align right edges	右端で整列
+	Aligned	位置合わせあり
+	All Caps	すべて大文字
+	All Slices	すべてのスライス
+	All User Slices	すべてのユーザースライス
+	All shortcuts reset to Photoshop defaults.	すべてのショートカットを初期状態に戻しました。
+	Alt	Alt
+	Alt-click to define a source point to clone from	Alt+クリックでコピー元を指定
+	Always use pressure for opacity	常に筆圧を不透明度に使う
+	Always use pressure for size	常に筆圧をサイズに使う
+	Amount	量
+	Anchor:	基準位置:
+	Angle	角度
+	Angle Gradient	円錐形グラデーション
+	Angle Jitter	角度のジッター
+	Answer the unsaved-changes prompt first	先に未保存の変更の確認に答えてください
+	Anti-alias	アンチエイリアス
+	Appearance	外観
+	Appearance (Layer Style)	外観(レイヤースタイル)
+	Apply Layer Mask	レイヤーマスクを適用
+	Apply Per Tip	先端ごとに適用
+	Apply next selected layer comp	次のレイヤーカンプを適用
+	Apply previous selected layer comp	前のレイヤーカンプを適用
+	Artboard	アートボード
+	Artboard Background Color	アートボードの背景色
+	Assign working space	作業用スペースを割り当て
+	Author:	作成者:
+	Auto Hide	自動的に隠す
+	Auto-Select:	自動選択:
+	Automatically level near-horizontal line segments	水平に近い線分を自動で水平にする
+	Automatically straighten and level	自動で傾きと水平を補正
+	Automatically straighten near-vertical line segments	垂直に近い線分を自動で垂直にする
+	Background	背景
+	Background Color	背景色
+	Background Contents	背景の内容
+	Balance	バランス
+	Baseline	ベースライン
+	Baseline shift	ベースラインシフト
+	Basic	基本
+	Before (Y)	補正前(Y)
+	Begin recording	記録を開始
+	Bend:	曲げ:
+	Bicubic	バイキュービック
+	Bicubic (smooth gradients)	バイキュービック(滑らかな階調)
+	Bilinear	バイリニア
+	Black	黒
+	Black & White	白黒
+	Black Point Compensation	黒点補正
+	Black, White	黒、白
+	Blacks	ブラック
+	Blending	合成
+	Blending Options	描画オプション
+	Blue	青
+	Blue, Red, Yellow	青、赤、黄
+	Both	両方
+	Both Axes	両方の軸
+	Bottom	下
+	Brightness	明るさ
+	Brightness Jitter	明るさのジッター
+	Brightness/Contrast	明るさ・コントラスト
+	Bring the selected pin forward	選択したピンを前面へ
+	Brush Preset picker	ブラシプリセットの選択
+	Brush Reconstruct Options	ブラシの復元オプション
+	Brush Tool Options	ブラシツールのオプション
+	Cache Level:	キャッシュレベル:
+	Camera Raw isn't open	Camera Raw は開いていません
+	Cancel	キャンセル
+	Cancel (Esc)	キャンセル(Esc)
+	Cancel any current edits (Esc)	現在の編集をキャンセル(Esc)
+	Cancel current crop operation  (Esc)	現在の切り抜きをキャンセル(Esc)
+	Cancel transform (Esc)	変形をキャンセル(Esc)
+	Cancel warp (Esc)	ワープをキャンセル(Esc)
+	Canvas	カンバス
+	Canvas extension color:	カンバス拡張カラー:
+	Capture	取り込み
+	Capture the visibility, position and style of every layer with + below, then switch between versions.	下の + で、各レイヤーの表示状態・位置・スタイルを取り込み、バージョンを切り替えられます。
+	Catch-up on Stroke End	ストローク終了時に追いつく
+	Center	中央
+	Center Crop Marks	中央のトンボ
+	Center text	中央揃え
+	Change	変更
+	Change All	すべて変更
+	Change Screen Mode  (F)	スクリーンモードを変更(F)
+	Change To:	変更後:
+	Channel Mixer	チャンネルミキサー
+	Channel:	チャンネル:
+	Check All Layers	すべてのレイヤーをチェック
+	Check Spelling	スペルチェック
+	Clarity	明瞭度
+	Clear All	すべて消去
+	Clear Override	上書きを解除
+	Clear Samples	サンプルを消去
+	Click sets foreground · right-click sets background	クリックで前景色、右クリックで背景色を設定
+	Click the first point or press {key} to close · Esc cancels	最初の点をクリックするか {key} で閉じる · Esc でキャンセル
+	Click to add a point · drag off or {key}-click or Delete to remove	クリックで点を追加 · 外へドラッグ、{key}+クリック、Delete で削除
+	Click to apply, {key}-click to clear overrides, double-click for Style Options	クリックで適用、{key}+クリックで上書き解除、ダブルクリックでスタイルオプション
+	Click to edit the gradient	クリックしてグラデーションを編集
+	Click to restore the current colour	クリックして現在の色に戻す
+	Click to zoom in  ·  {key}-click to zoom out  ·  drag right/left to zoom in/out	クリックで拡大 · {key}+クリックで縮小 · 右/左にドラッグで拡大/縮小
+	Click with the Note tool to add a note.	注釈ツールでクリックすると注釈を追加できます。
+	Click: corner · Drag: smooth · Click first point: close · {key} finish · Esc cancel	クリック: 角 · ドラッグ: 滑らか · 最初の点をクリック: 閉じる · {key} 完了 · Esc キャンセル
+	Clip to layer below	下のレイヤーでクリッピング
+	Clipped	クリッピング済み
+	Close Style Options	スタイルオプションを閉じる
+	Cmd	Cmd
+	Coated CMYK	コート紙 CMYK
+	Color & Swatches	カラーとスウォッチ
+	Color Balance	カラーバランス
+	Color Detail	カラーの精細度
+	Color Grading	カラーグレーディング
+	Color Lookup	カラールックアップ
+	Color Management	カラーマネジメント
+	Color Mixer	カラーミキサー
+	Color Mode	カラーモード
+	Color Priority	カラー優先
+	Color Range preview	色域指定のプレビュー
+	Color:	カラー:
+	Colorize	色彩の統一
+	Colors	カラー
+	Commit Perspective Warp ({key})	遠近法ワープを確定({key})
+	Commit Puppet Warp ({key})	パペットワープを確定({key})
+	Commit any current edits ({key})	現在の編集を確定({key})
+	Commit current crop operation  ({key})	現在の切り抜きを確定({key})
+	Commit transform ({key})	変形を確定({key})
+	Commit warp ({key})	ワープを確定({key})
+	Constant	一定
+	Constrain proportions	縦横比を固定
+	Contact Sheet II	コンタクトシート II
+	Content-Aware	コンテンツに応じる
+	Contiguous	隣接
+	Contrast	コントラスト
+	Control:	コントロール:
+	Convert document's colors to the working space	ドキュメントの色を作業用スペースに変換
+	Convert to sRGB	sRGB に変換
+	Copies	部数
+	Copper	銅
+	Copyright	著作権
+	Copyright and Contact Info	著作権と連絡先
+	Corner Crop Marks	角のトンボ
+	Corner radius	角の半径
+	Correction	補正
+	Count Jitter	数のジッター
+	Create	作成
+	Create Droplet	ドロップレットを作成
+	Create Texture	テクスチャを作成
+	Create Video Timeline	ビデオタイムラインを作成
+	Create a new count group	新しいカウントグループを作成
+	Create a new document or open an existing file.	新規ドキュメントを作成するか、既存のファイルを開きます。
+	Create a new group	新しいグループを作成
+	Create a new layer	新規レイヤーを作成
+	Create new action	新規アクションを作成
+	Create new channel	新規チャンネルを作成
+	Create new document from current state	現在の状態から新規ドキュメントを作成
+	Create new fill or adjustment layer	新規塗りつぶし/色調補正レイヤーを作成
+	Create new gradient	新規グラデーションを作成
+	Create new group	新規グループを作成
+	Create new layer comp	新規レイヤーカンプを作成
+	Create new pattern from the selection	選択範囲から新規パターンを作成
+	Create new shape from the current path	現在のパスから新規シェイプを作成
+	Create new snapshot	新規スナップショットを作成
+	Create new style (from the selected type)	新規スタイルを作成(選択した文字から)
+	Create new style from the selected layer	選択したレイヤーから新規スタイルを作成
+	Create new tool preset	新規ツールプリセットを作成
+	Crop Factor	切り抜き係数
+	Ctrl	Ctrl
+	Current & Below	現在のレイヤーとその下
+	Current Layer	現在のレイヤー
+	Current Size	現在のサイズ
+	Current Tool Only	現在のツールのみ
+	Curve	カーブ
+	Curves	トーンカーブ
+	Custom	カスタム
+	Custom Shapes	カスタムシェイプ
+	Cyan	シアン
+	Cyan  ·  Red	シアン · 赤
+	Darken	比較(暗)
+	Darks	暗部
+	Data Sets	データセット
+	Default	既定
+	Default colours (D)	初期カラーに戻す(D)
+	Default printer	既定のプリンター
+	Default restored.	既定に戻しました。
+	Define	定義
+	Define at least one variable first.	先に変数を 1 つ以上定義してください。
+	Dehaze	かすみの除去
+	Delete Cropped Pixels	切り抜かれたピクセルを削除
+	Delete Group	グループを削除
+	Delete Layer Mask	レイヤーマスクを削除
+	Delete Layers	レイヤーを削除
+	Delete Shortcut	ショートカットを削除
+	Delete Timeline	タイムラインを削除
+	Delete Tool Preset	ツールプリセットを削除
+	Delete count group	カウントグループを削除
+	Delete current channel	現在のチャンネルを削除
+	Delete current state	現在の状態を削除
+	Delete effect layer	効果レイヤーを削除
+	Delete layer	レイヤーを削除
+	Delete layer comp	レイヤーカンプを削除
+	Delete note	注釈を削除
+	Delete selected measurements	選択した測定値を削除
+	Delete style	スタイルを削除
+	Delete tool preset	ツールプリセットを削除
+	Density	密度
+	Density:	密度:
+	Depth	深さ
+	Depth Jitter	深さのジッター
+	Description	説明
+	Deselect All	すべての選択を解除
+	Detail	ディテール
+	Diamond Gradient	ダイヤモンド形グラデーション
+	Difference	差の絶対値
+	Diffusion	拡散
+	Discard the embedded profile (don't color manage)	埋め込みプロファイルを破棄(カラーマネジメントしない)
+	Discontiguous	不連続
+	Discord	Discord
+	Dismiss	閉じる
+	Display P3	Display P3
+	Display Text	表示テキスト
+	Dither	ディザ
+	Divide…	分割…
+	Document	ドキュメント
+	Don't Save	保存しない
+	Done	完了
+	Dots	ドット
+	Drag a rectangle around the object	オブジェクトを囲む矩形をドラッグ
+	Drag on the image to add a constraint; Shift for horizontal/vertical; right-click to delete.	画像上をドラッグして制約を追加。Shift で水平/垂直、右クリックで削除。
+	Drag to move the active shape's path or the Work Path	ドラッグして、アクティブなシェイプのパスまたは作業用パスを移動
+	Draw with the Pen tool (P) or make a work path from a selection.	ペンツール(P)で描くか、選択範囲から作業用パスを作成します。
+	Drop an image or PSD anywhere to open it.	画像や PSD をここにドロップすると開きます。
+	Duplicate Layers…	レイヤーを複製…
+	Duplicate style	スタイルを複製
+	Edit Toolbar…	ツールバーを編集…
+	Edit in Quick Mask Mode  (Q)	クイックマスクモードで編集(Q)
+	Edit in Standard Mode  (Q)	標準モードで編集(Q)
+	Effects	効果
+	Embed Color Profile	カラープロファイルを埋め込む
+	Embedded Profile Mismatch	埋め込みプロファイルの不一致
+	Enable airbrush-style build-up effects	エアブラシ風の重ね塗り効果を有効にする
+	Enhance Edge	エッジを強調
+	Entire Font	フォント全体
+	Exact	正確
+	Expansion:	拡張:
+	Export Presets	プリセットを書き出し
+	Export selected measurements (CSV)	選択した測定値を書き出し(CSV)
+	Exposure	露光量
+	Exposure and Gamma	露光量とガンマ
+	Exposure:	露光量:
+	Eyedropper	スポイト
+	Factor:	係数:
+	Faux Bold	疑似ボールド
+	Faux Italic	疑似イタリック
+	Feather	ぼかし
+	Fewer Points	ポイントを減らす
+	File Settings	ファイル設定
+	Fill	塗り
+	Fill:	塗り:
+	Filter for adjustment layers	色調補正レイヤーで絞り込み
+	Filter for pixel layers	ピクセルレイヤーで絞り込み
+	Filter for shape layers	シェイプレイヤーで絞り込み
+	Filter for smart objects	スマートオブジェクトで絞り込み
+	Filter for type layers	文字レイヤーで絞り込み
+	Filter:	フィルター:
+	Finger Painting	指先で描画
+	Fisheye	魚眼
+	Fit	合わせる
+	Fit Screen	画面に合わせる
+	Fit in View	表示に合わせる
+	Fixed	固定
+	Fixed Ratio	縦横比を固定
+	Fixed Size	サイズを固定
+	Flip	反転
+	Flip X	X 反転
+	Flip X Jitter	X 反転のジッター
+	Flip Y	Y 反転
+	Flip Y Jitter	Y 反転のジッター
+	Flow	流量
+	Flow Jitter	流量のジッター
+	Focal Length	焦点距離
+	Font	フォント
+	Font Size:	フォントサイズ:
+	Font size	フォントサイズ
+	Foreground	前景
+	Foreground to Background	描画色から背景色へ
+	Foreground/Background Jitter	描画色/背景色のジッター
+	Format	形式
+	Frame from Layers…	レイヤーからフレーム…
+	Free	自由
+	Full Spherical	全球
+	Fuzziness:	許容量:
+	GPU	GPU
+	Gamma Correction	ガンマ補正
+	Gamma:	ガンマ:
+	Global	全体
+	Glow Color	光彩のカラー
+	Gradient Map	グラデーションマップ
+	Grain	粒子
+	Gray	グレー
+	Gray Gamma 2.2	グレー ガンマ 2.2
+	Green	緑
+	Group	グループ
+	Hardness	硬さ
+	Heart	ハート
+	Height	高さ
+	Height:	高さ:
+	Hide Auto Slices	自動スライスを非表示
+	Hide Properties	プロパティを隠す
+	Highlight Compression	ハイライトの圧縮
+	Highlight Priority	ハイライト優先
+	Highlights	ハイライト
+	Home	ホーム
+	Horizontal scale	水平比率
+	Hue	色相
+	Hue Jitter	色相のジッター
+	Hue/Saturation	色相・彩度
+	Hyphenate	ハイフネーション
+	Ignore	無視
+	Ignore All	すべて無視
+	Image Size	画像サイズ
+	Import Brushes…	ブラシを読み込み…
+	Import Photoshop brushes (.abr)	Photoshop ブラシ(.abr)を読み込み
+	Import Presets	プリセットを読み込み
+	Imported	読み込み済み
+	Indent First	先頭行の字下げ
+	Indent Left	左の字下げ
+	Indent Right	右の字下げ
+	Indent first line	先頭行を字下げ
+	Indent left margin	左マージンを字下げ
+	Indent right margin	右マージンを字下げ
+	Input:	入力:
+	Inside	内側
+	Interlaced	インターレース
+	Interpolation:	補間方法:
+	Intersect with selection  ({key})	選択範囲との共通部分({key})
+	Invert All	すべて反転
+	Invert has no settings.	階調の反転には設定がありません。
+	Italic	イタリック
+	Join us on Discord	Discord に参加
+	Justify all	均等配置(最終行も)
+	Justify last centered	最終行中央揃えの両端揃え
+	Justify last left	最終行左揃えの両端揃え
+	Justify last right	最終行右揃えの両端揃え
+	Kerning	カーニング
+	Keyboard Shortcuts	キーボードショートカット
+	Keyboard Shortcuts and Menus	キーボードショートカットとメニュー
+	Kind	種類
+	Label Size	ラベルのサイズ
+	Labels	ラベル
+	Lanczos (sharp)	ランチョス(シャープ)
+	Landscape	横向き
+	Last Document State	ドキュメントの最後の状態
+	Layout	レイアウト
+	Leading	行送り
+	Leading (set to the font size × auto-leading when Auto)	行送り(自動のときはフォントサイズ × 自動行送り)
+	Leave as is (don't color manage)	そのまま(カラーマネジメントしない)
+	Left	左
+	Left align text	左揃え
+	Length:	長さ:
+	Level	レベル
+	Levels	レベル補正
+	Lighten	比較(明)
+	Lightness	明度
+	Lights	ライト
+	Limits:	制限:
+	Linear Gradient	線形グラデーション
+	Link layers	レイヤーをリンク
+	Link width and height	幅と高さをリンク
+	Liquify is not open	ゆがみは開いていません
+	Load	読み込み
+	Load 3D LUT…	3D LUT を読み込み…
+	Load Photoshop brushes (.abr)	Photoshop ブラシ(.abr)を読み込み
+	Load channel as selection	チャンネルを選択範囲として読み込み
+	Load…	読み込み…
+	Localized Color Clusters	近似色のクラスター化
+	Lock	ロック
+	Lock all	すべてをロック
+	Lock image pixels	画像ピクセルをロック
+	Lock layer	レイヤーをロック
+	Lock position	位置をロック
+	Lock transparent pixels	透明ピクセルをロック
+	Lock:	ロック:
+	Logical Length:	論理的な長さ:
+	Logical Units:	論理単位:
+	Luminance	輝度
+	Luminance Detail	輝度のディテール
+	Magenta	マゼンタ
+	Magenta  ·  Green	マゼンタ · 緑
+	Maintain aspect ratio	縦横比を維持
+	Marker Size	マーカーのサイズ
+	Mask All	すべてマスク
+	Mask Options	マスクオプション
+	Masking	マスク処理
+	Master	マスター
+	Matte	マット
+	Median:	中央値:
+	Menus	メニュー
+	Mesh Size	メッシュのサイズ
+	Metadata	メタデータ
+	Metrics	メトリクス
+	Midpoint	中間点
+	Midtones	中間調
+	Midtones from:	中間調の開始:
+	Midtones to:	中間調の終了:
+	Minimum Depth	最小の深さ
+	Minimum Diameter	最小の直径
+	Minimum Roundness	最小の真円率
+	Mode:	モード:
+	Monochrome	モノクロ
+	More Points	ポイントを増やす
+	Move effect layer down	効果レイヤーを下へ移動
+	Move effect layer up	効果レイヤーを上へ移動
+	Move to	移動先
+	Name	名前
+	Name:	名前:
+	Nearest Neighbor	ニアレストネイバー
+	Nearest Neighbor (hard edges)	ニアレストネイバー(ハードエッジ)
+	New Size	新しいサイズ
+	New document…	新規ドキュメント…
+	New effect layer	新規効果レイヤー
+	New selection	新規選択
+	Next frame	次のフレーム
+	Next note	次の注釈
+	No Color	カラーなし
+	No Color Management	カラーマネジメントなし
+	No Dither	ディザなし
+	No author	作成者なし
+	No character style	文字スタイルなし
+	No document	ドキュメントなし
+	No matching commands	一致するコマンドがありません
+	No presets for the current tool.	現在のツールのプリセットはありません。
+	No presets of this type.	この種類のプリセットはありません。
+	No properties	プロパティなし
+	No tool presets.	ツールプリセットはありません。
+	Noise Reduction	ノイズ軽減
+	Normal	通常
+	Not in Dictionary:	辞書にない語:
+	OK	OK
+	Offset	オフセット
+	Only Web Colors	Web セーフカラーのみ
+	Opacity	不透明度
+	Opacity Jitter	不透明度のジッター
+	Opacity:	不透明度:
+	Open a document to define variables.	変数を定義するには、ドキュメントを開いてください。
+	Open a document to select a colour range.	色域を指定するには、ドキュメントを開いてください。
+	Open a document to use the timeline.	タイムラインを使うには、ドキュメントを開いてください。
+	Optical	オプティカル
+	Optimized	最適化
+	Option-click to define a source point to clone from	Option+クリックでコピー元を指定
+	Original	オリジナル
+	Output Channel:	出力チャンネル:
+	Output Levels:	出力レベル:
+	Output:	出力:
+	Outside	外側
+	Overlay Color	オーバーレイカラー
+	Overlay Opacity	オーバーレイの不透明度
+	Overlay: Rule of Thirds	オーバーレイ: 三分割法
+	Override Pressure	筆圧を上書き
+	Override Rotation	回転を上書き
+	Override Tilt	傾きを上書き
+	PRESET DETAILS	プリセットの詳細
+	PSD	PSD
+	Paint Overlay	ペイントオーバーレイ
+	Panel locations are saved in the workspace. Keyboard shortcuts, menus and toolbar are optional.	パネルの位置はワークスペースに保存されます。キーボードショートカット、メニュー、ツールバーは任意です。
+	Paper	用紙
+	Path	パス
+	Pattern	パターン
+	Pattern Size	パターンのサイズ
+	Pause	一時停止
+	Percent	パーセント
+	Perceptual	知覚的
+	Perspective Warp is not active	遠近法ワープは有効ではありません
+	Perspective Warp: draw planes along the image's perspective, then switch to Warp	遠近法ワープ: 画像の遠近に沿って面を描き、ワープに切り替えます
+	Photo Filter	写真フィルター
+	PhotoCraft	PhotoCraft
+	PhotoCraft Manages Colors	PhotoCraft でカラーを管理
+	PhotoCraft — an open-source, native image editor written in Rust.	PhotoCraft — Rust で書かれた、オープンソースのネイティブ画像エディター。
+	Pin Depth:	ピンの深さ:
+	Pixel Length:	ピクセル長:
+	Pixels/Centimeter	ピクセル/センチメートル
+	Pixels/Inch	ピクセル/インチ
+	Pixels:	ピクセル:
+	Play	再生
+	Play selection	選択範囲を再生
+	Portrait	縦向き
+	Position	位置
+	Position and Size	位置とサイズ
+	Posterize	ポスタリゼーション
+	Preserve Details	ディテールを保持
+	Preserve Luminosity	輝度を保持
+	Preset	プリセット
+	Preset Type	プリセットの種類
+	Preset:	プリセット:
+	Presets:	プリセット:
+	Press keys…	キーを押してください…
+	Pressure	筆圧
+	Pressure for Opacity	不透明度に筆圧を使用
+	Pressure for Size	サイズに筆圧を使用
+	Prevent auto-nesting in and out of Artboards and Frames	アートボードやフレームへの自動入れ子を防ぐ
+	Preview	プレビュー
+	Previous frame	前のフレーム
+	Previous note	前の注釈
+	Print	プリント
+	Printer	プリンター
+	Printer Manages Colors	プリンターでカラーを管理
+	Printer Setup	プリンター設定
+	Printing Marks	印刷用マーク
+	Progressive	プログレッシブ
+	Promote	昇格
+	Protect Detail	ディテールを保護
+	Protect Foreground Color	描画色を保護
+	Protect Tones	階調を保護
+	Proximity Match	近接一致
+	Pulled String Mode	引き紐モード
+	Puppet Warp is not active	パペットワープは有効ではありません
+	Purity	純度
+	Quality	画質
+	Quick Actions	クイックアクション
+	Quick Export As PNG	PNG としてクイック書き出し
+	Radial Gradient	円形グラデーション
+	Radius	半径
+	Radius:	半径:
+	Range:	範囲:
+	Rate	速度
+	Recently Used	最近使用したもの
+	Reconstruct	再構築
+	Record ● a sequence of edits, then play ▶ it on any document.	一連の編集を記録 ● し、任意のドキュメントで再生 ▶ できます。
+	Red	赤
+	Redefine style by current selection	現在の選択でスタイルを再定義
+	Reflected Gradient	反射形グラデーション
+	Registration Marks	見当合わせマーク
+	Regular	レギュラー
+	Relative	相対
+	Relative Colorimetric	相対的な色域を維持
+	Remove	削除
+	Remove All Pins	すべてのピンを削除
+	Remove Background	背景を削除
+	Remove Planes	面を削除
+	Remove stop	分岐点を削除
+	Remove variable	変数を削除
+	Rename	名前を変更
+	Rename Group…	グループ名を変更…
+	Rename Layer…	レイヤー名を変更…
+	Rename Tool Preset…	ツールプリセット名を変更…
+	Rename…	名前を変更…
+	Resample	再サンプル
+	Reset All to Defaults	すべて既定に戻す
+	Reset Section	セクションをリセット
+	Reset Transform	変形をリセット
+	Reset to defaults	既定に戻す
+	Resolution	解像度
+	Resolution:	解像度:
+	Restore All	すべて復元
+	Restore Defaults	既定に戻す
+	Restrictive (Web)	制限(Web)
+	Right	右
+	Right align text	右揃え
+	Rigid	剛体
+	Rotate:	回転:
+	Rotation	回転
+	Roughness	粗さ
+	Roundness	真円率
+	Roundness Jitter	真円率のジッター
+	Rulers & Grids	定規とグリッド
+	Sample All Layers	すべてのレイヤーをサンプル
+	Sample:	サンプル:
+	Sampling: Background Swatch	サンプリング: 背景スウォッチ
+	Sampling: Continuous	サンプリング: 連続
+	Sampling: Once	サンプリング: 1 回
+	Saturate	彩度を上げる
+	Saturation	彩度
+	Saturation Jitter	彩度のジッター
+	Save HTML and Images	HTML と画像を保存
+	Save as PDF	PDF として保存
+	Save selection as channel	選択範囲をチャンネルとして保存
+	Save…	保存…
+	Scale to Fit Media	メディアに合わせて拡大・縮小
+	Scatter	散布
+	Scratch disks	スクラッチディスク
+	Search	検索
+	Search commands	コマンドを検索
+	Search commands, tools and panels…	コマンド、ツール、パネルを検索…
+	Search fonts	フォントを検索
+	Select All	すべてを選択
+	Select Subject	被写体を選択
+	Select a type layer or click into text to insert glyphs	文字レイヤーを選択するか、テキスト内をクリックして字形を挿入します
+	Select text to apply a character style	文字スタイルを適用するテキストを選択してください
+	Select:	選択:
+	Selections	選択範囲
+	Selective	特定色
+	Selective Color	特定色域の選択
+	Send the selected pin backward	選択したピンを背面へ
+	Set additional smoothing options	滑らかさの追加オプションを設定
+	Set background color	背景色を設定
+	Set foreground color	描画色を設定
+	Set painting symmetry options	対称描画のオプションを設定
+	Set shape fill type	シェイプの塗りの種類を設定
+	Set shape stroke type	シェイプの線の種類を設定
+	Set the text color	文字色を設定
+	Shadows	シャドウ
+	Shape:	シェイプ:
+	Sharpening	シャープ
+	Shift	Shift
+	Shortcut removed.	ショートカットを削除しました。
+	Show All Menu Items	すべてのメニュー項目を表示
+	Show Backdrop	背景を表示
+	Show Guides	ガイドを表示
+	Show Mask	マスクを表示
+	Show Mesh	メッシュを表示
+	Show Overlay	オーバーレイを表示
+	Show Transform Controls	バウンディングボックスを表示
+	Show or hide the Notes panel	注釈パネルを表示/非表示
+	Show:	表示:
+	Sides	辺の数
+	Sides:	辺の数:
+	Size	サイズ
+	Size Jitter	サイズのジッター
+	Size:	サイズ:
+	Slice Options…	スライスオプション…
+	Slices From Guides	ガイドからスライス
+	Slices are locked (View › Lock Slices)	スライスはロックされています(表示 › スライスをロック)
+	Small Caps	スモールキャップ
+	Smoothing	スムージング
+	Space After	後ろのスペース
+	Space Before	前のスペース
+	Spacing	間隔
+	Spell check complete.	スペルチェックが完了しました。
+	Split:	分割:
+	Star ratio	星の比率
+	Stop playing/recording	再生/記録を停止
+	Straighten	角度補正
+	Straighten Layer	レイヤーの角度補正
+	Strength:	強さ:
+	Strikethrough	取り消し線
+	Stroke	線
+	Stroke Catch-up	ストロークの追従
+	Stroke:	線:
+	Style	スタイル
+	Style Options	スタイルオプション
+	Style Options…	スタイルオプション…
+	Style: Normal	スタイル: 通常
+	Subtract from Sample	サンプルから削除
+	Subtract from selection  ({key})	選択範囲から削除({key})
+	Suggestions:	候補:
+	Swap colours (X)	描画色と背景色を入れ替え(X)
+	Swaps height and width	高さと幅を入れ替えます
+	Switch between free transform and warp modes	自由変形とワープのモードを切り替え
+	Switch theme	テーマを切り替え
+	Temperature	色温度
+	Tetrahedral	四面体
+	Text Position:	テキストの位置:
+	Texture	テクスチャ
+	Texture Each Tip	先端ごとにテクスチャ
+	Threshold	しきい値
+	Threshold Level	しきい値レベル
+	Thumbnail size (smallest: list)	サムネールのサイズ(最小: リスト)
+	Tilt X	傾き X
+	Tilt Y	傾き Y
+	Tint	色かぶり補正
+	Toggle count group visibility	カウントグループの表示を切り替え
+	Toggle text orientation	文字の方向を切り替え
+	Tolerance	許容値
+	Tolerance:	許容値:
+	Tone:	トーン:
+	Toolbar	ツールバー
+	Top	上
+	Total:	合計:
+	Tracking	トラッキング
+	Tracking (1/1000 em)	トラッキング(1/1000 em)
+	Transparency	透明
+	Transparent	透明
+	Trilinear	トライリニア
+	Type Styles	文字スタイル
+	Type:	種類:
+	Underline	下線
+	Untitled	名称未設定
+	Untitled-1	名称未設定-1
+	Update layer comp (visibility, position and appearance)	レイヤーカンプを更新(表示状態・位置・外観)
+	Use Default	既定を使用
+	Use Legacy	従来方式を使用
+	Use Measurement Scale	測定スケールを使用
+	Use the embedded profile (instead of the working space)	埋め込みプロファイルを使用(作業用スペースの代わり)
+	Variables bind a layer's visibility, text or pixels to a named data slot.	変数は、レイヤーの表示状態・テキスト・ピクセルを、名前付きのデータ枠に結び付けます。
+	Vertical scale	垂直比率
+	Vibrance	自然な彩度
+	View Options	表示オプション
+	Vignetting	周辺光量
+	Violet, Orange	紫、オレンジ
+	Visibility	表示状態
+	Visible	表示
+	Warp:	ワープ:
+	Web Snap	Web スナップ
+	Weight	ウェイト
+	Weight:	ウェイト:
+	White	白
+	White Balance: As Shot	ホワイトバランス: 撮影時の設定
+	Whites	白レベル
+	Width	幅
+	Width:	幅:
+	Work Path	作業用パス
+	Yellow	イエロー
+	Yellow  ·  Blue	黄 · 青
+	Zoom	ズーム
+	Zoom in	拡大
+	Zoom out	縮小
+	command or shortcut	コマンドまたはショートカット
+	current	現在
+	image file path	画像ファイルのパス
+	modified	変更あり
+	name	名前
+	new	新規
+	{name} options	{name} のオプション
+	↑↓ navigate   {key} run   esc close	↑↓ 移動   {key} 実行   esc 閉じる
+	Version {version}	バージョン {version}
+	New Document	新規ドキュメント
+	Error	エラー
+	Command	コマンド
+
+# Tool names, brush and style option tables
+	Adjustment layers have nothing to transform	色調補正レイヤーには変形するものがありません
+	Altitude	高度
+	Android 1080p	Android 1080p
+	Apple Watch 45mm	Apple Watch 45mm
+	Aqua	アクア
+	Art & Illustration	アート・イラスト
+	ArtCraft	ArtCraft
+	Background Eraser Tool	背景消しゴムツール
+	Bevel & Emboss	ベベルとエンボス
+	Blend Mode	描画モード
+	Blues	ブルー系
+	Blur Tool	ぼかしツール
+	Bold	ボールド
+	Brush	ブラシ
+	Brush Pose	ブラシの姿勢
+	Brush Tip Shape	ブラシ先端のシェイプ
+	Brush Tool	ブラシツール
+	Build-up	重ね塗り
+	Burn Tool	焼き込みツール
+	Centimeters	センチメートル
+	Choke	境界のぼかし幅
+	Classic	クラシック
+	Click to add text	クリックしてテキストを追加
+	Click to fill similar colours	クリックして近い色を塗りつぶし
+	Clone Stamp Tool	コピースタンプツール
+	Color Burn	焼き込みカラー
+	Color Dodge	覆い焼きカラー
+	Color Dynamics	カラーの変化
+	Color Overlay	カラーオーバーレイ
+	Comic Book	コミック
+	Conform	適合
+	Content-Aware Fill needs a selection on a pixel layer	コンテンツに応じた塗りつぶしには、ピクセルレイヤー上の選択範囲が必要です
+	Could not transform: the layer is empty	変形できません: レイヤーが空です
+	Could not use Perspective Warp: the layer is empty	遠近法ワープを使えません: レイヤーが空です
+	Could not use Puppet Warp: no opaque pixels	パペットワープを使えません: 不透明なピクセルがありません
+	Could not use Puppet Warp: the layer is empty	パペットワープを使えません: レイヤーが空です
+	Crop Tool	切り抜きツール
+	Crosswise	十字
+	Current Tool	現在のツール
+	Custom Shape Tool	カスタムシェイプツール
+	Cyans	シアン系
+	Default Photoshop Size	既定サイズ
+	Delete Workspace	ワークスペースを削除
+	Diamond	ダイヤモンド形
+	Dimensions:	寸法:
+	Direction	方向
+	Distance	距離
+	Document Dimensions	ドキュメントの寸法
+	Document Profile	ドキュメントのプロファイル
+	Document Sizes	ドキュメントのサイズ
+	Dodge Tool	覆い焼きツール
+	Down	下
+	Drag to draw a gradient	ドラッグしてグラデーションを描画
+	Drag to move the active layer	ドラッグしてアクティブなレイヤーを移動
+	Drag to pan  ·  hold Space with any tool	ドラッグでパン · どのツールでも Space を押しながら
+	Drop Shadow	ドロップシャドウ
+	Dual Brush	デュアルブラシ
+	Edge	エッジ
+	Efficiency	効率
+	Efficiency: 100%	効率: 100%
+	Ellipse Tool	楕円形ツール
+	Elliptical Marquee Tool	楕円形選択ツール
+	Emboss	エンボス
+	Eraser	消しゴム
+	Eraser Tool	消しゴムツール
+	ExtraBold	エクストラボールド
+	ExtraLight	エクストラライト
+	Eyedropper Tool	スポイトツール
+	Fade	フェード
+	Fill Opacity	塗りの不透明度
+	Film & Video	フィルム・ビデオ
+	From	開始
+	General	一般
+	GitHub	GitHub
+	Gradient Overlay	グラデーションオーバーレイ
+	Gradient Tool	グラデーションツール
+	Greens	グリーン系
+	Hand Tool	手のひらツール
+	Hard	ハード
+	Hard Mix	ハードミックス
+	Healing Brush Tool	修復ブラシツール
+	Highlights from:	ハイライトの開始:
+	History Brush Tool	ヒストリーブラシツール
+	Horizontal Type Tool	横書き文字ツール
+	Image Size:	画像サイズ:
+	Inches	インチ
+	Indexed	インデックス
+	Initial Direction	初期の方向
+	Inner Bevel	内側ベベル
+	Inner Glow	光彩(内側)
+	Inner Shadow	シャドウ(内側)
+	Lab	Lab
+	Landscape, 10 x 8	横向き、10 x 8
+	Landscape, 6 x 4	横向き、6 x 4
+	Landscape, 7 x 5	横向き、7 x 5
+	Lasso	投げ縄
+	Lasso Tool	投げ縄ツール
+	Layer Count	レイヤー数
+	Layer Knocks Out Drop Shadow	レイヤーでドロップシャドウを抜く
+	Legal	リーガル
+	Letter	レター
+	Light	ライト
+	Line Tool	直線ツール
+	Linear	線形
+	Linear Burn	焼き込み(リニア)
+	Linear Height	線形の高さ
+	Link with Layer	レイヤーとリンク
+	Lorem Ipsum	ダミーテキスト
+	Magentas	マゼンタ系
+	Magic Eraser Tool	背景消しゴム(自動)ツール
+	Magic Wand Tool	自動選択ツール
+	Marquee	選択
+	Mean:	平均:
+	Measurement Scale	測定スケール
+	Measurement Scale Marker	測定スケールマーカー
+	Millimeters	ミリメートル
+	Mobile	モバイル
+	Move Tool	移動ツール
+	Multiply	乗算
+	My Brushes	マイブラシ
+	Neutrals	中間色系
+	New Workspace	新規ワークスペース
+	Note Tool	注釈ツール
+	Object Selection Tool	オブジェクト選択ツール
+	Off	オフ
+	Open	開く
+	Orange	オレンジ
+	Original Ratio	元の縦横比
+	Out Of Gamut	色域外
+	Outer Bevel	外側ベベル
+	Outer Glow	光彩(外側)
+	Overlay	オーバーレイ
+	Paint Bucket Tool	塗りつぶしツール
+	Paints from the document's opening state	ドキュメントを開いた時点の状態から描画します
+	Path Selection Tool	パスコンポーネント選択ツール
+	Pattern Overlay	パターンオーバーレイ
+	Pen Pressure	ペンの筆圧
+	Pen Tilt	ペンの傾き
+	Pen Tool	ペンツール
+	Photo	写真
+	PhotoCraft website	PhotoCraft の Web サイト
+	Picas	パイカ
+	Pillow Emboss	ピローエンボス
+	Pixel Replacement	ピクセルの置き換え
+	Pixels	ピクセル
+	Points	ポイント
+	Polygon Tool	多角形ツール
+	Polygonal Lasso Tool	多角形選択ツール
+	Portrait, 4 x 6	縦向き、4 x 6
+	Portrait, 5 x 7	縦向き、5 x 7
+	PostScript (72 points/inch)	PostScript (72 ポイント/インチ)
+	Postcard	はがき
+	Poster	ポスター
+	Pro (Dark)	プロ(ダーク)
+	Pro (Medium Gray)	プロ(中間グレー)
+	Protect Texture	テクスチャを保護
+	Purple	紫
+	Quick Mask	クイックマスク
+	Quick Selection Tool	クイック選択ツール
+	Radial	円形
+	Rasterize Layer	レイヤーをラスタライズ
+	Ratio	縦横比
+	Recent	最近
+	Rectangle Tool	長方形ツール
+	Rectangular Marquee Tool	長方形選択ツール
+	Reds	レッド系
+	Reflected	反射形
+	Sample: foreground colour	サンプル: 描画色
+	Sampled Colors	サンプルしたカラー
+	Satin	サテン
+	Save Pixel Aspect Ratio	ピクセル縦横比を保存
+	Scattering	散布
+	Scratch Sizes	スクラッチサイズ
+	Select Data Points	データポイントを選択
+	Selection	選択範囲
+	SemiBold	セミボールド
+	Shadows up to:	シャドウの終了:
+	Shape Dynamics	シェイプの変化
+	Sharpen Tool	シャープツール
+	Show Extras Options	エクストラの表示オプション
+	Slice Select Tool	スライス選択ツール
+	Slice Tool	スライスツール
+	Smart Filters	スマートフィルター
+	Smudge Tool	指先ツール
+	Soft	ソフト
+	Soften	ぼかし
+	Source	ソース
+	Source: set	ソース: 設定済み
+	Sponge Tool	スポンジツール
+	Spot Healing Brush Tool	スポット修復ブラシツール
+	Spread	スプレッド
+	Square, 12 x 12	正方形、12 x 12
+	Square, 5 x 5	正方形、5 x 5
+	Std Dev:	標準偏差:
+	Studio (Dark)	スタジオ(ダーク)
+	Studio (Light)	スタジオ(ライト)
+	Stylus Wheel	スタイラスホイール
+	Subtract	減算
+	Tabloid	タブロイド
+	Text Replacement	テキストの置き換え
+	Thin	シン
+	Traditional (72.27 points/inch)	従来方式 (72.27 ポイント/インチ)
+	Transfer	伝達
+	Triangle Tool	三角形ツール
+	Unsaved changes	未保存の変更
+	Uses the foreground and background colours.	描画色と背景色を使用します。
+	Web	Web
+	Web Large	Web (大)
+	Web Minimum	Web (最小)
+	Web Most Common	Web (標準)
+	WebP (lossless)	WebP (可逆)
+	Wet Edges	ウェットエッジ
+	Yellows	イエロー系
+	Zoom Tool	ズームツール
+	{name} Properties	{name} のプロパティ
+
+# Templates with placeholders
+	Revert “{name}” to the last saved version? Your changes will be lost.	「{name}」を最後に保存した状態に戻しますか? 変更は失われます。
+	Do you want to save the changes you made to “{name}” before quitting?	終了する前に、「{name}」への変更を保存しますか?
+	Do you want to save the changes you made to “{name}” before closing?	閉じる前に、「{name}」への変更を保存しますか?
+	Doc: {flat}/{layered}	ドキュメント: {flat}/{layered}
+	Scratch: {size}	スクラッチ: {size}
+	Untagged {mode}	タグなし {mode}
+	{w} px x {h} px ({ppi} ppi)	{w} px × {h} px ({ppi} ppi)
+	Resolution: {dpi} pixels/inch	解像度: {dpi} ピクセル/インチ
+	Doc: {w} × {h} px	ドキュメント: {w} × {h} px
+	Frame {current} / {total}	フレーム {current} / {total}
+	Count: {n}	カウント: {n}
+	BLANK DOCUMENT PRESETS ({n})	空白ドキュメントのプリセット ({n})
+	Constraints ({n})	制約 ({n})
+	Align {what}	{what}で整列
+@plural	{n} Layer|{n} Layers	{n} レイヤー
+@plural	{n} layer|{n} layers	{n} レイヤー
+@plural	Group · {n} layer|Group · {n} layers	グループ · {n} レイヤー
+
+# Preferences (labels are generated from the setting names)
+	Additional plugins folder	追加のプラグインフォルダー
+	Adobe	Adobe
+	Adobe rgb	Adobe RGB
+	Allow agent control	エージェントによる操作を許可
+	Allow scripts to connect	スクリプトからの接続を許可
+	Always	常に
+	Always create smart objects when placing	配置時に常にスマートオブジェクトを作成
+	Animated zoom	アニメーションズーム
+	Apply auto tone	自動トーン補正を適用
+	Ask	確認する
+	Ask before saving layered tiff	レイヤー付き TIFF の保存前に確認
+	Auto collapse icon panels	アイコンパネルを自動で折りたたむ
+	Auto show hidden panels	隠れたパネルを自動で表示
+	Auto show home screen	ホーム画面を自動で表示
+	Autosave	自動保存
+	Autosave minutes	自動保存の間隔(分)
+	Beep when done	完了時にビープ音を鳴らす
+	Bicubic automatic	バイキュービック(自動)
+	Bicubic sharper	バイキュービック(シャープ)
+	Bicubic smoother	バイキュービック(滑らか)
+	Bit depth	ビット深度
+	Brush preview color	ブラシプレビューの色
+	Cache levels	キャッシュレベル
+	Cache tile size	キャッシュタイルのサイズ
+	Camera Raw Defaults	Camera Raw の既定値
+	Canvas border	カンバスの境界
+	Canvas color	カンバスの色
+	Canvas custom color	カンバスのカスタム色
+	Color picker	カラーピッカー
+	Color space	カラースペース
+	Column width	列の幅
+	Concise	簡潔
+	Control port	制御ポート
+	Convert to srgb	sRGB に変換
+	Cursors	カーソル
+	Custom dark	カスタム(ダーク)
+	Custom light	カスタム(ライト)
+	Dark	ダーク
+	Dark gray	ダークグレー
+	Dashed lines	破線
+	Destination	保存先
+	Detailed	詳細
+	Disks	ディスク
+	Display p3	Display P3
+	Double click layer mask launches select and mask	レイヤーマスクのダブルクリックで「選択とマスク」を起動
+	Drop shadow	ドロップシャドウ
+	Dynamic color sliders	カラースライダーを動的に変化
+	East asian	東アジア
+	Effect cache mb	効果キャッシュ (MB)
+	Enable flick panning	フリックによるパンを有効にする
+	Enable floating document window docking	浮動ドキュメントウィンドウのドッキングを有効にする
+	Enable narrow options bar	幅の狭いオプションバーを有効にする
+	Enabled	有効
+	Enhanced Controls	拡張コントロール
+	Export clipboard	クリップボードを書き出す
+	Extra large	特大
+	File Handling	ファイル管理
+	File path	ファイルのパス
+	Fill new type layers with placeholder	新規文字レイヤーにプレースホルダーを入れる
+	Font preview	フォントのプレビュー
+	Full size tip	実寸の先端
+	Gamut warning color	色域外警告の色
+	Gamut warning opacity	色域外警告の不透明度
+	Generator enabled	自動生成を有効にする
+	Gif	GIF
+	Glossy	光沢
+	Grid color	グリッドの色
+	Grid colors	グリッドの色
+	Grid size	グリッドのサイズ
+	Grid style	グリッドのスタイル
+	Grid unit	グリッドの単位
+	Gridline every	グリッド線の間隔
+	Guide color	ガイドの色
+	Guide style	ガイドのスタイル
+	Guides, Grid & Slices	ガイド・グリッド・スライス
+	Gutter	余白
+	History Log	ヒストリーログ
+	History states	ヒストリーの数
+	Ignore exif profile tag	EXIF のプロファイルタグを無視
+	Image interpolation	画像の補間方法
+	Image previews	画像のプレビュー
+	Integrations	連携
+	Interface	インターフェイス
+	Jpeg quality	JPEG 品質
+	Jpg	JPG
+	Language	言語
+	Large tabs	大きなタブ
+	Legacy compositing	従来の合成方式
+	Light gray	ライトグレー
+	Line	線
+	Lines	線
+	Lowercase extension	拡張子を小文字にする
+	Maximize psd compatibility	PSD の互換性を最大にする
+	Medium gray	中間グレー
+	Memory usage mb	メモリ使用量 (MB)
+	Missing glyph protection	字形欠落の保護
+	Modern	モダン
+	Nearest neighbor	ニアレストネイバー
+	Never	しない
+	Normal tip	通常の先端
+	Open as smart object	スマートオブジェクトとして開く
+	Open documents as tabs	ドキュメントをタブで開く
+	Overscroll	オーバースクロール
+	Performance	パフォーマンス
+	Png	PNG
+	Point size	ポイントサイズ
+	Precise	精密
+	Preserve details	ディテールを保持
+	Print resolution	印刷解像度
+	Pro	プロ
+	Pro medium	プロ(中間)
+	Pro photo	ProPhoto
+	Quick export format	クイック書き出しの形式
+	Quick export location	クイック書き出しの保存先
+	Recent file count	最近使ったファイルの数
+	Recent files	最近使ったファイル
+	Recent fonts	最近使ったフォント
+	Recover on launch	起動時に復元
+	Remember workspace changes	ワークスペースの変更を記憶
+	Resize image during place	配置時に画像をリサイズ
+	Rotate view with trackpad	トラックパッドでビューを回転
+	Same folder	同じフォルダー
+	Save in background	バックグラウンドで保存
+	Scratch Disks	スクラッチディスク
+	Screen	スクリーン
+	Screen resolution	画面解像度
+	Scrubby slider acceleration	スクラブスライダーの加速
+	Sessions only	セッションのみ
+	Sharpen for	シャープの対象
+	Show channels in color	チャンネルをカラーで表示
+	Show crosshair in brush tip	ブラシ先端に十字線を表示
+	Show extension panels	拡張パネルを表示
+	Show font names in english	フォント名を英語で表示
+	Show menu colors	メニューの色を表示
+	Show only crosshair while painting	描画中は十字線のみ表示
+	Show slice numbers	スライス番号を表示
+	Show tooltips	ツールチップを表示
+	Show transformation values	変形値を表示
+	Slice color	スライスの色
+	Smart guide color	スマートガイドの色
+	Smart quotes	スマート引用符
+	Snap vector tools and transforms to pixel grid	ベクトルツールと変形をピクセルグリッドにスナップ
+	Srgb	sRGB
+	Standard	標準
+	Studio	スタジオ
+	Studio light	スタジオ(ライト)
+	Subdivisions	分割数
+	System	システム
+	Text engine	テキストエンジン
+	Text file	テキストファイル
+	Tiny	極小
+	Touch gestures	タッチジェスチャ
+	Transparency & Gamut	透明部分・色域
+	Type units	文字の単位
+	UI font size	UI のフォントサイズ
+	UI scale	UI の拡大率
+	Units & Rulers	単位・定規
+	Use additional plugins folder	追加のプラグインフォルダーを使う
+	Use esc to commit	Esc キーで確定
+	Use gpu	GPU を使用
+	Use legacy free transform	従来の自由変形を使用
+	Use shift key for tool switch	Shift キーでツールを切り替え
+	Vary round brush hardness on hud	HUD で丸ブラシの硬さを変更
+	Webp	WebP
+	World ready	多言語対応
+	Zoom clicked point to center	クリックした位置を中央にズーム
+	Zoom resizes windows	ズームでウィンドウをリサイズ
+	Zoom with scroll wheel	スクロールホイールでズーム
+	Zoom with trackpad pinch	トラックパッドのピンチでズーム
+	Pass Through	通過
+	Dissolve	ディザ合成
+	Darker Color	カラー比較(暗)
+	Linear Dodge (Add)	覆い焼き(リニア)- 加算
+	Lighter Color	カラー比較(明)
+	Soft Light	ソフトライト
+	Hard Light	ハードライト
+	Vivid Light	ビビッドライト
+	Linear Light	リニアライト
+	Pin Light	ピンライト
+	Exclusion	除外
+	Divide	除算
+	Luminosity	輝度
+@plural	{n} sample|{n} samples	サンプル {n} 個
+	{added}, {removed} subtracted	{added}、除外 {removed} 個
+
+# Added with the rebase onto the dock / brush picker work
+	Adjustment Preview	色調補正のプレビュー
+	Airbrush: keeps depositing paint while the pointer rests.	エアブラシ: ポインターを止めている間も塗料を乗せ続けます。
+	Angle:	角度:
+	Blend If	条件付き合成
+	Close Tab Group	タブグループを閉じる
+	Collapse	折りたたむ
+	Collapse All Groups	すべてのグループを折りたたむ
+	Collapse Panel Group	パネルグループを折りたたむ
+	Collapse group  ({key}-click: all groups)	グループを折りたたむ({key}+クリック: すべてのグループ)
+	Create new brush from the current settings	現在の設定から新規ブラシを作成
+	Create new brush from these settings	この設定から新規ブラシを作成
+	Delete brush	ブラシを削除
+	Drag the arrow to set the angle, the dots to set the roundness	矢印をドラッグして角度、点をドラッグして真円率を設定
+	Expand	展開
+	Expand Panel Group	パネルグループを展開
+	Expand group  ({key}-click: all groups)	グループを展開({key}+クリック: すべてのグループ)
+	Fade steps	フェードのステップ数
+	Hide the layer's effects  ({key}-click: all layers)	レイヤーの効果を隠す({key}+クリック: すべてのレイヤー)
+	Import Brushes… (.abr)	ブラシを読み込み…(.abr)
+	Move Group Down	グループを下へ移動
+	Move Group Up	グループを上へ移動
+	Reset the brush to the defaults	ブラシを既定に戻す
+	Restore original size	元のサイズに戻す
+	Roundness:	真円率:
+	Search Brushes	ブラシを検索
+	Show the layer's effects  ({key}-click: all layers)	レイヤーの効果を表示({key}+クリック: すべてのレイヤー)
+	Brush picker	ブラシピッカー
+	Erase	消去
+	Right click with painting tools	描画ツールで右クリック
+
+# Strings added to the UI after this catalog was first written (rebase onto main, 2026-10).
+	System Info…	システム情報…
+	System Info	システム情報
+	More panels	その他のパネル
+	These settings aren't available in PhotoCraft yet.	これらの設定は PhotoCraft ではまだ使用できません。
+	Graphics	グラフィックス
+	Reset GPU Backend	GPU バックエンドをリセット
+	Applies at next launch.	次回の起動時に適用されます。
+	Click to sample the foreground colour  ·  {key}-click for background	クリックで描画色を取得 · {key}+クリックで背景色を取得
+	{key}-click to set the source	{key}+クリックでソースを設定
+	{key} to subtract	{key} で削除
+	Clone source {n} ({key}-click with Clone Stamp to set)	コピーソース {n}({key}+クリックでコピースタンプのソースを設定)
+	Source: not set ({key}-click with Clone Stamp)	ソース: 未設定({key}+クリックでコピースタンプ)
+	Pixel Layer	ピクセルレイヤー
+	Type Layer	文字レイヤー
+	Shape Layer	シェイプレイヤー
+	Group Layer	グループレイヤー
+	Fill Layer	塗りつぶしレイヤー
+	Smart Object Layer	スマートオブジェクトレイヤー
+	Create Warped Text	ワープテキストを作成
+	Rasterize Smart Object	スマートオブジェクトをラスタライズ
+	Rasterize Fill Content	塗りの内容をラスタライズ
+	Unlock: picking a preset replaces these settings	ロック解除: プリセットを選ぶとこの設定は置き換わります
+	Lock: keep these settings when picking another preset	ロック: 別のプリセットを選んでもこの設定を保持します
+	Diameter:	直径:
+	Hardness:	硬さ:
+	No brush presets	ブラシプリセットがありません
+	Toggle the Brush Settings panel  (F5)	ブラシ設定パネルの表示を切り替え(F5)
+	Create new brush preset from the current settings	現在の設定から新規ブラシプリセットを作成
+	Brush Settings…  (F5): every option of this brush	ブラシ設定…(F5): このブラシのすべてのオプション
+	Rename Brush…	ブラシの名前を変更…
+	Delete Brush	ブラシを削除
+	Group name	グループ名
+	Brush name	ブラシ名
+	Grid view	グリッド表示
+	List view	リスト表示
+	Off: the speed of the pointer sets the spacing	オフ: ポインターの速度で間隔が決まります
+	Tilt Scale	傾きの比率
+	Brush Projection	ブラシの投影
+	Apply the pen's tilt and rotation to the tip shape	ペンの傾きと回転を先端のシェイプに適用します
+	Mixer Brush	混合ブラシ
+	Wet	ウェット
+	Mix	混合
+	Wetness Jitter	ウェットのジッター
+	Mix Jitter	混合のジッター
+	Show the layer mask as an overlay	レイヤーマスクをオーバーレイで表示
+	Toggle visibility	表示/非表示を切り替え
+	Unlink the mask from the layer	マスクとレイヤーのリンクを解除
+	Link the mask to the layer	マスクをレイヤーにリンク
+	Gradient	グラデーション
+	Gradient Options	グラデーションオプション
+	Align with layer	レイヤーに揃える
+	Reset Alignment	位置をリセット
+	Centre the gradient (offset 0, 0)	グラデーションを中央に配置(オフセット 0, 0)
+	The current gradient (pick one in Window › Gradients)	現在のグラデーション(ウィンドウ › グラデーション で選択)
+	Select a type layer to edit its character and paragraph settings.	文字レイヤーを選択すると、文字と段落の設定を編集できます。
+	Text color	文字色
+	Type Options	文字オプション
+	Anti-aliasing method	アンチエイリアスの種類
+	Horizontal type	横書き
+	Vertical type	縦書き
+	Fill path with foreground color	パスを描画色で塗りつぶす
+	Stroke path with brush	ブラシでパスの境界線を描く
+	Load path as a selection	パスを選択範囲として読み込む
+	Make work path from selection	選択範囲から作業用パスを作成
+	Add vector mask	ベクトルマスクを追加
+	Create new path	新規パスを作成
+	Delete path	パスを削除
+	Delete vector mask	ベクトルマスクを削除
+	CPU (no GPU acceleration)	CPU(GPU アクセラレーションなし)
+	DirectX 12	DirectX 12
+	GPU backend	GPU バックエンド
+	Metal	Metal
+	OpenGL	OpenGL
+	Use tablet pressure	タブレットの筆圧を使用
+	Vulkan	Vulkan
+	No path to make a selection from: draw one with the Pen tool or select one in the Paths panel.	選択範囲を作成するパスがありません。ペンツールで描くか、パスパネルでパスを選択してください。
+	Cancel opening	開くのをキャンセル
+	Cancelled opening {name}	{name} を開くのをキャンセルしました
+	Cancelled {label}	{label} をキャンセルしました
+	Esc to cancel	Esc キーでキャンセル
+	Opening {name}	{name} を開いています
+	Opening {name}…	{name} を開いています…
+	Opening…	開いています…
+	Reading…	読み込み中…
+	Working…	処理中…

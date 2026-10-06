@@ -1,0 +1,195 @@
+# Scorecard checklist: file compatibility (#215 formats, #216 measurement).
+# Corpus numbers come from crates/io/tests/corpus.rs, not from here.
+# Statuses must be true on main. Verified against 4b53f62 on 2026-10-05 (smart objects: #215 PR).
+area = "file"
+title = "File compatibility"
+order = 2
+
+[[item]]
+id = "FILE-215-1"
+target = "Smart Objects export as embedded Smart Objects (SoLd + lnk2), not flat pixels"
+status = "done"
+issue = 215
+note = "psd_export.rs smart_blocks: PlLd + SoLd, source in lnk2 (.pcraft -> PSB); engine tests/smart_psd.rs; Photoshop 2026 opens 8/16-bit exports as live smart objects. Linked files are embedded"
+
+[[item]]
+id = "FILE-215-2"
+target = "Smart Filters survive PSD save and re-open (filterFX descriptor read and written)"
+status = "partial"
+issue = 215
+note = "smart_map.rs: 14 filters mapped both ways, others kept verbatim, mask in FEid; io tests/smart_corpus.rs. PhotoCraft-only filters (Twirl, Liquify…) are left out of filterFX with a warning"
+
+[[item]]
+id = "FILE-215-3"
+target = "Filter mask can be painted directly, with undo"
+status = "missing"
+issue = 215
+note = "smart_cmds.rs:382 mask only from the selection"
+
+[[item]]
+id = "FILE-215-4"
+target = "Adjustments (Hue/Sat + Colorize, Curves, Levels, Shadows/Highlights) apply as Smart Filters"
+status = "partial"
+issue = 215
+note = "PSD Levels/Curves/Shadows-Highlights smart filters render (adjust_cmds.rs adjust_as_filter); Image › Adjustments on a smart object doesn't add one yet"
+
+[[item]]
+id = "FILE-215-5"
+target = "Smart Filter rows: collapse, mask thumb, blend icon, drag reorder, context menu, live preview"
+status = "partial"
+issue = 215
+note = "smart_ui.rs:31 rows + visibility + editor; no collapse, drag or context menu"
+
+[[item]]
+id = "FILE-215-6"
+target = "Smart Object corner skew and perspective (quad or homography transform)"
+status = "missing"
+issue = 215
+note = "doc lib.rs:312 SmartObject.transform is an Affine"
+
+[[item]]
+id = "FILE-215-7"
+target = "Layered TIFF read and write (tag 37724), honouring the ask-before-saving pref"
+status = "missing"
+issue = 215
+note = "No 37724 / ImageSourceData in crates"
+
+[[item]]
+id = "FILE-215-8"
+target = "Large and BigTIFF import with banded decode across all IFDs"
+status = "missing"
+issue = 215
+note = "codecs tiff.rs:3 'Only the first IFD is read'"
+
+[[item]]
+id = "FILE-215-9"
+target = "SVG opens and places as shape layers or a vector Smart Object"
+status = "missing"
+issue = 215
+note = "No SVG codec or import"
+
+[[item]]
+id = "FILE-215-10"
+target = "Multi-page PDF save, PDF presentation, layer comps to PDF, vector/text output, PDF import"
+status = "missing"
+issue = 215
+note = "Only print_cmds.rs:133 print_pdf (raster print page)"
+
+[[item]]
+id = "FILE-215-11"
+target = "RAW: lossy DNG, highlight modes, .xmp sidecars, RAW prefs wired, per-camera corpus"
+status = "missing"
+issue = 215
+note = "raw sensor.rs:210 lossy DNG unsupported; raw_defaults unread; no xmp"
+
+[[item]]
+id = "FILE-215-12"
+target = "Camera Raw dialog shows a histogram; settings persist as a PSD Smart Filter"
+status = "partial"
+issue = 215
+note = "No histogram; lens_cmds.rs:268 stores an in-app Smart Filter, PSD drops it"
+
+[[item]]
+id = "FILE-215-13"
+target = "Video layer frames persist in .pcraft; PSD video layers mapped"
+status = "partial"
+issue = 215
+note = "format convert.rs:89 + tests/roundtrip.rs:282 persist frames; no PSD video mapping"
+
+[[item]]
+id = "FILE-215-14"
+target = "User swatch model with ACO/ASE import and export"
+status = "missing"
+issue = 215
+note = "panels.rs:954 const SWATCHES: [[u8; 3]; 40]"
+
+[[item]]
+id = "FILE-215-15"
+target = "Layer Style contour picker, curve editor, presets, .shc import/export"
+status = "missing"
+issue = 215
+note = "doc effects.rs:57 Contour model only"
+
+[[item]]
+id = "FILE-215-16"
+target = "Advanced Blending (knockout, blend as group, mask hides effects) end to end"
+status = "missing"
+issue = 215
+note = "No knockout / blend_interior / transparency_shapes in doc, compose or io"
+
+[[item]]
+id = "FILE-215-17"
+target = "CMYK/RGB documents preview spot inks; spot plates export (TIFF extra samples, PDF)"
+status = "missing"
+issue = 215
+note = "compose multichannel.rs:1 spot preview for Multichannel only"
+
+[[item]]
+id = "FILE-215-18"
+target = "Save for Web per-slice settings remembered; Export As remembers and offers nearest scaling"
+status = "partial"
+issue = 215
+note = "file_ui.rs:188 last_web in-session only; export_dialog.rs:16 fixed defaults"
+
+[[item]]
+id = "FILE-215-19"
+target = "Save As JPEG opens a JPEG Options dialog (quality 0-12, format options)"
+status = "missing"
+issue = 215
+note = "ExportSettings has jpeg_quality 1-100 only (lib.rs:118)"
+
+[[item]]
+id = "FILE-215-20"
+target = "Artboard tool with handles and + buttons, Duplicate Artboard beside, vector PDF pages"
+status = "partial"
+issue = 215
+note = "artboard_ui.rs:1 names/properties only; no tool, + buttons or duplicate"
+
+[[item]]
+id = "FILE-215-21"
+target = "Local libraries of colours, patterns, images and layers, as linked items or copies"
+status = "missing"
+issue = 215
+note = "Only preset libraries (preset_store.rs)"
+
+[[item]]
+id = "FILE-216-1"
+target = "Every corpus fetched and enforced in CI, cached by pin"
+status = "missing"
+issue = 216
+note = "No corpus step in ci.yml; in progress in #190"
+
+[[item]]
+id = "FILE-216-2"
+target = "Large-file fixtures: 20 MP, 150-layer, generated 2 GB PSD and 4-5 GB PSB stress tests"
+status = "missing"
+issue = 216
+note = "Only banded.rs covers a >8 MP synthetic export"
+
+[[item]]
+id = "FILE-216-3"
+target = "TIFF, RAW and EXR corpora read by tests; per-camera RAW coverage reported"
+status = "missing"
+issue = 216
+note = "corpus/tiff, raw and exr only listed by xtask corpus; no test reads them"
+
+[[item]]
+id = "FILE-216-4"
+target = "Exports re-open in a third-party oracle editor"
+status = "missing"
+issue = 216
+note = "The round trip is our export -> our import"
+
+[[item]]
+id = "FILE-216-5"
+target = "Save-path tests: layered TIFF, PDF, SVG, ACO/ASE, .shc, Smart Filters, atomic-save failure"
+status = "missing"
+issue = 216
+note = "Features absent; no atomic-save failure-injection test"
+
+[[item]]
+id = "FILE-216-6"
+target = "30-50 end-to-end workflow acceptance tasks driven through MCP or commands"
+status = "partial"
+issue = 216
+note = "automation/tests/agent_tasks.rs: 10 MCP tasks"

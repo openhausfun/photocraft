@@ -1,0 +1,101 @@
+[workspace]
+resolver = "3"
+members = ["crates/*", "apps/*", "xtask"]
+default-members = ["crates/*", "apps/photocraft-cli", "xtask"]
+
+[workspace.package]
+version = "0.2.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+rust-version = "1.90"
+
+[workspace.dependencies]
+# internal
+photocraft-geom = { path = "crates/geom" }
+photocraft-color = { path = "crates/color" }
+photocraft-cms = { path = "crates/cms" }
+photocraft-raster = { path = "crates/raster" }
+photocraft-doc = { path = "crates/doc" }
+photocraft-ops = { path = "crates/ops" }
+photocraft-psd = { path = "crates/psd" }
+photocraft-codecs = { path = "crates/codecs" }
+photocraft-raw = { path = "crates/raw" }
+photocraft-compose = { path = "crates/compose" }
+photocraft-gpu = { path = "crates/gpu" }
+photocraft-paint = { path = "crates/paint" }
+photocraft-algo = { path = "crates/algo" }
+photocraft-io = { path = "crates/io" }
+photocraft-text = { path = "crates/text" }
+photocraft-vector = { path = "crates/vector" }
+photocraft-format = { path = "crates/format" }
+photocraft-automation = { path = "crates/automation" }
+photocraft-plugins = { path = "crates/plugins" }
+photocraft-engine = { path = "crates/engine" }
+photocraft-ui-egui = { path = "crates/ui-egui" }
+photocraft-testkit = { path = "crates/testkit" }
+photocraft-tablet = { path = "crates/tablet" }
+
+# external
+thiserror = "2"
+serde = { version = "1", features = ["derive", "rc"] }
+serde_json = "1"
+arc-swap = "1"
+bytemuck = { version = "1", features = ["derive"] }
+flate2 = { version = "1", default-features = false, features = ["rust_backend"] }
+image = { version = "0.25", default-features = false }
+proptest = "1"
+eframe = { version = "0.36", default-features = false }
+egui = "0.36"
+egui_kittest = "0.36"
+rfd = "0.17"
+log = "0.4"
+rayon = "1"
+criterion = { version = "0.5", default-features = false }
+getrandom = "0.3"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+dbg_macro = "warn"
+todo = "warn"
+
+[profile.dev.package."*"]
+opt-level = 2
+
+[profile.dev]
+opt-level = 1
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+
+# The browser build (apps/photocraft-web, `data-cargo-profile` in its index.html). Hosts cap the
+# size of a single file (Cloudflare Pages/Workers: 25 MiB), and the wasm is downloaded on every
+# visit, so this profile optimizes for size: fat LTO, and opt-level "s" for everything except the
+# pixel-processing crates, which keep opt-level 3 so filters and compositing stay fast. panic
+# stays the target default (wasm32-unknown-unknown aborts; AGENTS.md's `panic = "unwind"` is for
+# the native app shell). packaging/web/package.sh fails the build above 24 MiB. Issue #198:
+# this took the wasm from 26.3 MiB (release profile) to 18.8 MiB.
+[profile.wasm-release]
+inherits = "release"
+opt-level = "s"
+lto = "fat"
+codegen-units = 1
+strip = "debuginfo"
+
+[profile.wasm-release.package."*"]
+opt-level = "s"
+
+[profile.wasm-release.package.photocraft-raster]
+opt-level = 3
+[profile.wasm-release.package.photocraft-color]
+opt-level = 3
+[profile.wasm-release.package.photocraft-cms]
+opt-level = 3
+[profile.wasm-release.package.photocraft-compose]
+opt-level = 3
+[profile.wasm-release.package.photocraft-algo]
+opt-level = 3
+[profile.wasm-release.package.photocraft-paint]
+opt-level = 3

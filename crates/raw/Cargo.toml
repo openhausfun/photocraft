@@ -1,0 +1,27 @@
+[package]
+name = "photocraft-raw"
+description = "Clean-room, pure-Rust camera raw decoder and developer (DNG, CR2, TIFF/EP raws)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[features]
+default = []
+# Synthetic raw-file generators (DNG / CR2 / TIFF-EP writers and a lossless-JPEG
+# encoder) for tests and fuzz seeds.
+testgen = []
+
+[dependencies]
+
+# Parallel bands on native; wasm builds stay single-threaded.
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+rayon = { workspace = true }
+
+[dev-dependencies]
+photocraft-raw = { path = ".", features = ["testgen"] }
+# Writes sRGB PNG previews in the `rawinfo` example.
+png = "0.18"
+
+[lints]
+workspace = true

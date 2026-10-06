@@ -1,0 +1,167 @@
+# Scorecard checklist: workspace and UI (#217). The "settings that do nothing" count comes from
+# the prefs audit (#204), not from here.
+# Statuses must be true on main. Verified against 4b53f62 on 2026-10-05.
+area = "ui"
+title = "Workspace and UI"
+order = 4
+
+[[item]]
+id = "UI-217-1"
+target = "Tool options, last Export As / Save for Web / Fill settings and font recents persist"
+status = "missing"
+issue = 217
+note = "No tool_options/export fields in Preferences (prefs.rs:694); export_dialog.rs:21 png/85"
+
+[[item]]
+id = "UI-217-2"
+target = "Window size and dock width remembered across restarts"
+status = "missing"
+issue = 217
+note = "main.rs:108 fixed 1440x900; dock.rs:529 snapshot omits the width"
+
+[[item]]
+id = "UI-217-3"
+target = "File > Open starts in the last-used folder"
+status = "missing"
+issue = 217
+note = "services.rs:110 FileDialog::new() without set_directory"
+
+[[item]]
+id = "UI-217-4"
+target = "Preferences all take effect; recent files persist and honour recent_file_count (#204)"
+status = "missing"
+issue = 217
+note = "See the prefs audit and BUG-204-*"
+
+[[item]]
+id = "UI-217-5"
+target = "Panel groups can float (menu + drag out of the dock) and are restored at launch"
+status = "missing"
+issue = 217
+note = "No floating groups in dock.rs/panels.rs"
+
+[[item]]
+id = "UI-217-6"
+target = "Document tabs: overflow list, context menu (Close/Others/All/Reveal), drag to reorder"
+status = "missing"
+issue = 217
+note = "canvas.rs:674-770 tabs click/close only"
+
+[[item]]
+id = "UI-217-7"
+target = "Command palette shows recently run commands on an empty query"
+status = "missing"
+issue = 217
+note = "palette.rs:83-108 fuzzy hits only"
+
+[[item]]
+id = "UI-217-8"
+target = "Tool-specific canvas right-click menu; right-click spelling suggestions in text fields"
+status = "partial"
+issue = 217
+note = "paint_mouse.rs:67 right-click opens the brush picker only"
+
+[[item]]
+id = "UI-217-9"
+target = "UI scale presets 100/115/125/150/200 % through zoom_factor, remembered"
+status = "missing"
+issue = 217
+note = "prefs.rs:61 UiScale unused; input_tests.rs:71 asserts zoom_factor stays 1.0"
+
+[[item]]
+id = "UI-217-10"
+target = "Appearance: animation toggle, canvas pattern toggle per theme, start-screen recents"
+status = "missing"
+issue = 217
+note = "No such prefs; start screen (canvas.rs:825) has no recents"
+
+[[item]]
+id = "UI-217-11"
+target = "Soft dark and soft light themes with picker previews; outlined knobs in light themes"
+status = "missing"
+issue = 217
+note = "theme.rs:28 five themes"
+
+[[item]]
+id = "UI-217-12"
+target = "Save custom New Document presets; a real Recent category"
+status = "missing"
+issue = 217
+note = "new_doc_ui.rs:17 'Recent' is a static list"
+
+[[item]]
+id = "UI-217-13"
+target = "Numeric fields accept arithmetic and units; scrubby labels; double-click resets a slider"
+status = "partial"
+issue = 217
+note = "widgets.rs:131 DragValue scrubs; no expressions, label scrub or reset"
+
+[[item]]
+id = "UI-217-14"
+target = "Layers panel: wheel steps blend modes, drop on New/Trash duplicates/deletes, checker behind art"
+status = "missing"
+issue = 217
+note = "panels.rs:1108 plain dropdown; trash is click-only (panels.rs:1213)"
+
+[[item]]
+id = "UI-217-15"
+target = "Curves: smoothing / pencil mode, black/grey/white eyedroppers, tooltips"
+status = "missing"
+issue = 217
+note = "adjust_editors.rs:397 has none of them"
+
+[[item]]
+id = "UI-217-16"
+target = "Hue/Saturation: Saturation and Lightness sliders get hue-following colour tracks"
+status = "missing"
+issue = 217
+note = "Only the Hue slider has a gradient"
+
+[[item]]
+id = "UI-217-17"
+target = "Color panel: wheel plus RGB/HSB/CMYK/Lab/Gray/Web slider modes; resizes with its group"
+status = "missing"
+issue = 217
+note = "panels.rs:1837 single field + hex/RGB readout"
+
+[[item]]
+id = "UI-217-18"
+target = "Alt+wheel zooms in gentle ~5 % steps; zoom controls uncramped"
+status = "missing"
+issue = 217
+note = "canvas.rs:1107-1125 no Alt handling"
+
+[[item]]
+id = "UI-217-19"
+target = "Shortcut hints rendered per platform; Reveal label per OS"
+status = "missing"
+issue = 217
+note = "~33 hard-coded modifier glyph strings in ui-egui; menu_catalog.rs:341 one label"
+
+[[item]]
+id = "UI-217-20"
+target = "'Show rulers in new documents' preference; guides stored as f64"
+status = "missing"
+issue = 217
+note = "No rulers pref; doc lib.rs:523 guides are Vec<f32>"
+
+[[item]]
+id = "UI-217-21"
+target = "One Preset Manager for every preset kind with folders, search, reorder, load/save sets"
+status = "partial"
+issue = 217
+note = "edit_menu_cmds.rs:714 covers brushes, custom shapes, patterns with reorder"
+
+[[item]]
+id = "UI-217-22"
+target = "Stamp Visible into a new layer keeping originals; Alt+Merge keeps originals"
+status = "missing"
+issue = 217
+note = "Only layer.mergeVisible (edit_cmds.rs:416)"
+
+[[item]]
+id = "UI-217-23"
+target = "Layer clipboard: copy/paste whole layers (masks, styles, type) between documents"
+status = "missing"
+issue = 217
+note = "Only copy/paste layer style (extra_cmds.rs:592)"
